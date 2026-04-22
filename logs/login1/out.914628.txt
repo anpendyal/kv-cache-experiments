@@ -1,0 +1,49 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@cccxc599>
+Subject: Job 914628: <kvcache_mass_oom_fix> in cluster <CCC2_LSF> Exited
+
+Job <kvcache_mass_oom_fix> was submitted from host <ccc-login1> by user <apendyal> in cluster <CCC2_LSF> at Mon Mar 16 13:33:10 2026
+Job was executed on host(s) <cccxc599>, in queue <normal>, as user <apendyal> in cluster <CCC2_LSF> at Mon Mar 16 13:35:10 2026
+</u/apendyal> was used as the home directory.
+</dccstor/nathan-ckpts/anooshka> was used as the working directory.
+Started at Mon Mar 16 13:35:10 2026
+Terminated at Mon Mar 16 13:39:03 2026
+Results reported at Mon Mar 16 13:39:03 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash -lc 'export PATH="$HOME/.local/bin:$PATH";
+            export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True;
+            mkdir -p /dccstor/nathan-ckpts/anooshka/logs;
+            micromamba run -p /u/apendyal/mamba_envs/mellea_py310 \
+              python -u /dccstor/nathan-ckpts/anooshka/kv_cache_dataset.py \
+              --out_root /dccstor/nathan-ckpts/anooshka/caselaw_kv/massachusetts \
+              --log "/dccstor/nathan-ckpts/anooshka/logs/caselaw_kv.${LSB_JOBID}.log"'
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   671.34 sec.
+    Max Memory :                                 32 GB
+    Average Memory :                             5.73 GB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   231 sec.
+    Turnaround time :                            353 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file </dccstor/nathan-ckpts/anooshka/logs/err.914628.txt> for stderr output of this job.
+

@@ -1,0 +1,15 @@
+/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:27<01:23, 27.81s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:54<00:54, 27.44s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [01:21<00:27, 27.15s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:29<00:00, 19.44s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:29<00:00, 22.36s/it]
+Traceback (most recent call last):
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache_dataset_oom_fix.py", line 300, in <module>
+    build_kv_from_dataset(args.out_root, args.log, limit=args.limit)
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache_dataset_oom_fix.py", line 256, in build_kv_from_dataset
+    kv_bytes, n_tokens, text_bytes, pt_size = _save_dc_cache(backend, text, pt_path)
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache_dataset_oom_fix.py", line 178, in _save_dc_cache
+    torch.save(legacy, buf)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/serialization.py", line 965, in save
+    _save(
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/serialization.py", line 1266, in _save
+    zip_file.write_record(name, storage, num_bytes)
+KeyboardInterrupt

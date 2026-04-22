@@ -1,0 +1,6 @@
+/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:25<01:17, 25.78s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:49<00:49, 24.84s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [01:15<00:25, 25.05s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:22<00:00, 17.85s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:22<00:00, 20.52s/it]
+'(ReadTimeoutError("HTTPSConnectionPool(host='huggingface.co', port=443): Read timed out. (read timeout=10)"), '(Request ID: 0bcd8e91-3573-4b4f-9273-1fcab663923e)')' thrown while requesting GET https://huggingface.co/datasets/common-pile/caselaw_access_project/resolve/3c2cb5080b3a16a04d8d8d07b28eaec7c1ba7a90/cap_00019.jsonl.gz
+Retrying in 1s [Retry 1/5].
+User defined signal 2

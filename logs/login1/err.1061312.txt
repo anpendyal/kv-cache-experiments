@@ -1,0 +1,24 @@
+/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:22<01:07, 22.50s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:45<00:45, 22.91s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [01:08<00:22, 22.66s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:14<00:00, 16.26s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:14<00:00, 18.63s/it]
+Traceback (most recent call last):
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/serialization.py", line 965, in save
+    _save(
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/serialization.py", line 1266, in _save
+    zip_file.write_record(name, storage, num_bytes)
+OSError: [Errno 122] Disk quota exceeded
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache_dataset.py", line 274, in <module>
+    build_kv_from_dataset(args.out_root, args.log, limit=args.limit)
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache_dataset.py", line 231, in build_kv_from_dataset
+    kv_bytes, n_tokens, text_bytes = _save_dc_cache(backend, text, pt_path)
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache_dataset.py", line 161, in _save_dc_cache
+    torch.save(legacy, ofh)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/serialization.py", line 964, in save
+    with _open_zipfile_writer(f) as opened_zipfile:
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/serialization.py", line 818, in __exit__
+    self.file_like.write_end_of_file()
+RuntimeError: [enforce fail at inline_container.cc:659] . unexpected pos 186008768 vs 186008656

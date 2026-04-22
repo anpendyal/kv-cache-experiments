@@ -1,0 +1,149 @@
+2026-03-26 12:00:52 | INFO | case=1 | id=mass_5/html/0001-01.html | n_tokens=5021 | text=19.74KB | kv_est=1.53GB | pt=1.53GB | kv_time=6.622s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:01:12 | INFO | case=2 | id=mass_5/html/0008-01.html | n_tokens=15135 | text=59.46KB | kv_est=4.62GB | pt=4.62GB | kv_time=19.794s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:01:19 | INFO | case=3 | id=mass_5/html/0030-01.html | n_tokens=6077 | text=24.06KB | kv_est=1.85GB | pt=1.85GB | kv_time=7.358s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:01:24 | INFO | case=4 | id=mass_5/html/0039-01.html | n_tokens=3824 | text=14.63KB | kv_est=1.17GB | pt=1.17GB | kv_time=4.624s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:01:28 | INFO | case=5 | id=mass_5/html/0044-01.html | n_tokens=3085 | text=11.46KB | kv_est=964.06MB | pt=964.08MB | kv_time=3.739s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:01:38 | INFO | case=6 | id=mass_5/html/0049-01.html | n_tokens=7743 | text=28.68KB | kv_est=2.36GB | pt=2.36GB | kv_time=9.958s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:01:41 | INFO | case=7 | id=mass_5/html/0059-01.html | n_tokens=2977 | text=11.88KB | kv_est=930.31MB | pt=930.33MB | kv_time=3.807s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:01:44 | INFO | case=8 | id=mass_5/html/0064-01.html | n_tokens=1973 | text=7.14KB | kv_est=616.56MB | pt=616.58MB | kv_time=2.421s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:01:46 | INFO | case=9 | id=mass_5/html/0066-01.html | n_tokens=1989 | text=7.11KB | kv_est=621.56MB | pt=621.58MB | kv_time=2.398s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:01:48 | INFO | case=10 | id=mass_5/html/0069-01.html | n_tokens=1687 | text=6.01KB | kv_est=527.19MB | pt=527.21MB | kv_time=2.149s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:01:50 | INFO | case=11 | id=mass_5/html/0072-01.html | n_tokens=1041 | text=3.82KB | kv_est=325.31MB | pt=325.33MB | kv_time=1.290s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:01:51 | INFO | case=12 | id=mass_5/html/0073-01.html | n_tokens=1320 | text=4.88KB | kv_est=412.50MB | pt=412.52MB | kv_time=1.559s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:01:53 | INFO | case=13 | id=mass_5/html/0075-01.html | n_tokens=1405 | text=5.69KB | kv_est=439.06MB | pt=439.08MB | kv_time=1.877s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:01:55 | INFO | case=14 | id=mass_5/html/0077-01.html | n_tokens=1117 | text=4.12KB | kv_est=349.06MB | pt=349.08MB | kv_time=1.546s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:01:56 | INFO | case=15 | id=mass_5/html/0079-01.html | n_tokens=1223 | text=4.32KB | kv_est=382.19MB | pt=382.21MB | kv_time=1.636s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:02:07 | INFO | case=16 | id=mass_5/html/0081-01.html | n_tokens=8539 | text=32.24KB | kv_est=2.61GB | pt=2.61GB | kv_time=10.680s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:02:13 | INFO | case=17 | id=mass_5/html/0093-01.html | n_tokens=4966 | text=18.43KB | kv_est=1.52GB | pt=1.52GB | kv_time=6.201s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:02:17 | INFO | case=18 | id=mass_5/html/0100-01.html | n_tokens=3167 | text=12.00KB | kv_est=989.69MB | pt=989.71MB | kv_time=3.706s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:02:20 | INFO | case=19 | id=mass_5/html/0104-01.html | n_tokens=2561 | text=10.19KB | kv_est=800.31MB | pt=800.33MB | kv_time=3.032s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:02:28 | INFO | case=20 | id=mass_5/html/0108-01.html | n_tokens=7047 | text=27.52KB | kv_est=2.15GB | pt=2.15GB | kv_time=8.401s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:02:33 | INFO | case=21 | id=mass_5/html/0118-01.html | n_tokens=3968 | text=15.01KB | kv_est=1.21GB | pt=1.21GB | kv_time=4.698s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:02:35 | INFO | case=22 | id=mass_5/html/0124-01.html | n_tokens=1479 | text=5.60KB | kv_est=462.19MB | pt=462.21MB | kv_time=2.145s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:02:37 | INFO | case=23 | id=mass_5/html/0126-01.html | n_tokens=1932 | text=7.64KB | kv_est=603.75MB | pt=603.77MB | kv_time=2.338s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:02:41 | INFO | case=24 | id=mass_5/html/0129-01.html | n_tokens=2375 | text=8.58KB | kv_est=742.19MB | pt=742.21MB | kv_time=3.475s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:02:47 | INFO | case=25 | id=mass_5/html/0132-01.html | n_tokens=5554 | text=20.87KB | kv_est=1.69GB | pt=1.69GB | kv_time=6.531s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:02:52 | INFO | case=26 | id=mass_5/html/0139-01.html | n_tokens=4006 | text=15.84KB | kv_est=1.22GB | pt=1.22GB | kv_time=4.710s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:02:53 | INFO | case=27 | id=mass_5/html/0145-01.html | n_tokens=919 | text=3.54KB | kv_est=287.19MB | pt=287.21MB | kv_time=1.146s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:02:56 | INFO | case=28 | id=mass_5/html/0146-01.html | n_tokens=2002 | text=7.49KB | kv_est=625.62MB | pt=625.65MB | kv_time=2.450s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:02:57 | INFO | case=29 | id=mass_5/html/0149-01.html | n_tokens=951 | text=3.46KB | kv_est=297.19MB | pt=297.21MB | kv_time=1.095s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:02:58 | INFO | case=30 | id=mass_5/html/0150-01.html | n_tokens=1370 | text=5.12KB | kv_est=428.12MB | pt=428.15MB | kv_time=1.660s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:03:03 | INFO | case=31 | id=mass_5/html/0153-01.html | n_tokens=3999 | text=15.40KB | kv_est=1.22GB | pt=1.22GB | kv_time=4.825s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:03:05 | INFO | case=32 | id=mass_5/html/0159-01.html | n_tokens=1306 | text=5.17KB | kv_est=408.12MB | pt=408.15MB | kv_time=2.089s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:03:06 | INFO | case=33 | id=mass_5/html/0161-01.html | n_tokens=762 | text=2.96KB | kv_est=238.12MB | pt=238.15MB | kv_time=1.021s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:03:10 | INFO | case=34 | id=mass_5/html/0162-01.html | n_tokens=2403 | text=9.72KB | kv_est=750.94MB | pt=750.96MB | kv_time=3.305s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:03:16 | INFO | case=35 | id=mass_5/html/0166-01.html | n_tokens=5285 | text=20.97KB | kv_est=1.61GB | pt=1.61GB | kv_time=6.520s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:03:18 | INFO | case=36 | id=mass_5/html/0174-01.html | n_tokens=1592 | text=6.31KB | kv_est=497.50MB | pt=497.52MB | kv_time=1.877s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:03:21 | INFO | case=37 | id=mass_5/html/0177-01.html | n_tokens=2256 | text=8.00KB | kv_est=705.00MB | pt=705.02MB | kv_time=2.655s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:03:22 | INFO | case=38 | id=mass_5/html/0181-01.html | n_tokens=1321 | text=4.85KB | kv_est=412.81MB | pt=412.83MB | kv_time=1.546s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:03:25 | INFO | case=39 | id=mass_5/html/0183-01.html | n_tokens=2449 | text=9.44KB | kv_est=765.31MB | pt=765.33MB | kv_time=2.811s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:03:27 | INFO | case=40 | id=mass_5/html/0186-01.html | n_tokens=1966 | text=7.13KB | kv_est=614.38MB | pt=614.40MB | kv_time=2.343s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:03:30 | INFO | case=41 | id=mass_5/html/0189-01.html | n_tokens=1917 | text=7.06KB | kv_est=599.06MB | pt=599.08MB | kv_time=2.223s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:03:34 | INFO | case=42 | id=mass_5/html/0192-01.html | n_tokens=3540 | text=12.05KB | kv_est=1.08GB | pt=1.08GB | kv_time=4.176s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:03:36 | INFO | case=43 | id=mass_5/html/0196-01.html | n_tokens=1116 | text=4.45KB | kv_est=348.75MB | pt=348.77MB | kv_time=1.626s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:03:36 | INFO | case=44 | id=mass_5/html/0198-01.html | n_tokens=186 | text=718.00B | kv_est=58.12MB | pt=58.15MB | kv_time=0.830s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:03:37 | INFO | case=45 | id=mass_5/html/0199-01.html | n_tokens=243 | text=970.00B | kv_est=75.94MB | pt=75.96MB | kv_time=0.527s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:03:39 | INFO | case=46 | id=mass_5/html/0200-01.html | n_tokens=1471 | text=5.67KB | kv_est=459.69MB | pt=459.71MB | kv_time=1.733s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:03:41 | INFO | case=47 | id=mass_5/html/0203-01.html | n_tokens=1091 | text=4.11KB | kv_est=340.94MB | pt=340.96MB | kv_time=2.084s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:03:43 | INFO | case=48 | id=mass_5/html/0204-01.html | n_tokens=2302 | text=8.52KB | kv_est=719.38MB | pt=719.40MB | kv_time=2.640s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:03:46 | INFO | case=49 | id=mass_5/html/0208-01.html | n_tokens=2427 | text=9.59KB | kv_est=758.44MB | pt=758.46MB | kv_time=3.121s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:03:49 | INFO | case=50 | id=mass_5/html/0211-01.html | n_tokens=2277 | text=8.76KB | kv_est=711.56MB | pt=711.58MB | kv_time=2.774s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:03:49 | INFO | PROGRESS cases=50 (skipped: not_reporter=461032, bad_id=41, missing_text=0, already_exists=0) | pt_total=44.67GB | kv_time_sum=183.8s | wall=345.4s
+2026-03-26 12:03:53 | INFO | case=51 | id=mass_5/html/0215-01.html | n_tokens=3103 | text=11.58KB | kv_est=969.69MB | pt=969.71MB | kv_time=3.925s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:03:58 | INFO | case=52 | id=mass_5/html/0219-01.html | n_tokens=4010 | text=15.84KB | kv_est=1.22GB | pt=1.22GB | kv_time=4.959s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:01 | INFO | case=53 | id=mass_5/html/0226-01.html | n_tokens=2606 | text=10.20KB | kv_est=814.38MB | pt=814.40MB | kv_time=3.163s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:04 | INFO | case=54 | id=mass_5/html/0230-01.html | n_tokens=1982 | text=7.35KB | kv_est=619.38MB | pt=619.40MB | kv_time=2.419s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:06 | INFO | case=55 | id=mass_5/html/0233-01.html | n_tokens=1405 | text=5.44KB | kv_est=439.06MB | pt=439.08MB | kv_time=1.913s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:08 | INFO | case=56 | id=mass_5/html/0235-01.html | n_tokens=1810 | text=6.90KB | kv_est=565.62MB | pt=565.65MB | kv_time=2.596s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:09 | INFO | case=57 | id=mass_5/html/0238-01.html | n_tokens=588 | text=1.99KB | kv_est=183.75MB | pt=183.77MB | kv_time=0.766s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:11 | INFO | case=58 | id=mass_5/html/0239-01.html | n_tokens=1269 | text=4.52KB | kv_est=396.56MB | pt=396.58MB | kv_time=1.956s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:12 | INFO | case=59 | id=mass_5/html/0241-01.html | n_tokens=909 | text=3.32KB | kv_est=284.06MB | pt=284.08MB | kv_time=1.147s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:15 | INFO | case=60 | id=mass_5/html/0242-01.html | n_tokens=2239 | text=8.39KB | kv_est=699.69MB | pt=699.71MB | kv_time=2.881s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:16 | INFO | case=61 | id=mass_5/html/0246-01.html | n_tokens=598 | text=2.22KB | kv_est=186.88MB | pt=186.90MB | kv_time=0.763s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:16 | INFO | case=62 | id=mass_5/html/0247-01.html | n_tokens=187 | text=686.00B | kv_est=58.44MB | pt=58.46MB | kv_time=0.257s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:16 | INFO | case=63 | id=mass_5/html/0247-02.html | n_tokens=280 | text=1.04KB | kv_est=87.50MB | pt=87.52MB | kv_time=0.416s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:18 | INFO | case=64 | id=mass_5/html/0248-01.html | n_tokens=1516 | text=5.72KB | kv_est=473.75MB | pt=473.77MB | kv_time=1.912s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:19 | INFO | case=65 | id=mass_5/html/0251-01.html | n_tokens=580 | text=2.04KB | kv_est=181.25MB | pt=181.27MB | kv_time=0.761s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:20 | INFO | case=66 | id=mass_5/html/0252-01.html | n_tokens=1052 | text=4.27KB | kv_est=328.75MB | pt=328.77MB | kv_time=1.336s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:22 | INFO | case=67 | id=mass_5/html/0254-01.html | n_tokens=890 | text=3.39KB | kv_est=278.12MB | pt=278.15MB | kv_time=1.106s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:24 | INFO | case=68 | id=mass_5/html/0255-01.html | n_tokens=2090 | text=7.62KB | kv_est=653.12MB | pt=653.15MB | kv_time=2.544s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:28 | INFO | case=69 | id=mass_5/html/0259-01.html | n_tokens=3145 | text=12.40KB | kv_est=982.81MB | pt=982.83MB | kv_time=3.857s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:29 | INFO | case=70 | id=mass_5/html/0264-01.html | n_tokens=884 | text=3.32KB | kv_est=276.25MB | pt=276.27MB | kv_time=1.114s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:30 | INFO | case=71 | id=mass_5/html/0266-01.html | n_tokens=635 | text=2.23KB | kv_est=198.44MB | pt=198.46MB | kv_time=0.789s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:35 | INFO | case=72 | id=mass_5/html/0267-01.html | n_tokens=4462 | text=16.59KB | kv_est=1.36GB | pt=1.36GB | kv_time=5.331s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:37 | INFO | case=73 | id=mass_5/html/0273-01.html | n_tokens=1315 | text=5.22KB | kv_est=410.94MB | pt=410.96MB | kv_time=1.660s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:39 | INFO | case=74 | id=mass_5/html/0276-01.html | n_tokens=1385 | text=5.64KB | kv_est=432.81MB | pt=432.83MB | kv_time=1.725s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:42 | INFO | case=75 | id=mass_5/html/0278-01.html | n_tokens=2496 | text=8.65KB | kv_est=780.00MB | pt=780.02MB | kv_time=3.319s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:43 | INFO | case=76 | id=mass_5/html/0281-01.html | n_tokens=490 | text=1.78KB | kv_est=153.12MB | pt=153.15MB | kv_time=0.638s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:43 | INFO | case=77 | id=mass_5/html/0282-01.html | n_tokens=431 | text=1.59KB | kv_est=134.69MB | pt=134.71MB | kv_time=0.588s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:48 | INFO | case=78 | id=mass_5/html/0284-01.html | n_tokens=4209 | text=16.11KB | kv_est=1.28GB | pt=1.28GB | kv_time=5.052s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:49 | INFO | case=79 | id=mass_5/html/0290-01.html | n_tokens=378 | text=1.45KB | kv_est=118.12MB | pt=118.15MB | kv_time=0.498s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:49 | INFO | case=80 | id=mass_5/html/0292-01.html | n_tokens=277 | text=1.04KB | kv_est=86.56MB | pt=86.58MB | kv_time=0.409s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:51 | INFO | case=81 | id=mass_5/html/0293-01.html | n_tokens=1984 | text=7.47KB | kv_est=620.00MB | pt=620.02MB | kv_time=2.409s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:52 | INFO | case=82 | id=mass_5/html/0296-01.html | n_tokens=395 | text=1.58KB | kv_est=123.44MB | pt=123.46MB | kv_time=0.544s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:55 | INFO | case=83 | id=mass_5/html/0296-02.html | n_tokens=2129 | text=8.29KB | kv_est=665.31MB | pt=665.33MB | kv_time=2.595s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:58 | INFO | case=84 | id=mass_5/html/0300-01.html | n_tokens=2437 | text=9.34KB | kv_est=761.56MB | pt=761.58MB | kv_time=2.971s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:58 | INFO | case=85 | id=mass_5/html/0303-01.html | n_tokens=304 | text=1.12KB | kv_est=95.00MB | pt=95.02MB | kv_time=0.437s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:04:59 | INFO | case=86 | id=mass_5/html/0304-01.html | n_tokens=712 | text=2.57KB | kv_est=222.50MB | pt=222.52MB | kv_time=0.939s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:05:01 | INFO | case=87 | id=mass_5/html/0305-01.html | n_tokens=1640 | text=6.31KB | kv_est=512.50MB | pt=512.52MB | kv_time=2.000s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:05:03 | INFO | case=88 | id=mass_5/html/0308-01.html | n_tokens=1954 | text=7.60KB | kv_est=610.62MB | pt=610.65MB | kv_time=2.425s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:05:07 | INFO | case=89 | id=mass_5/html/0311-01.html | n_tokens=3173 | text=12.19KB | kv_est=991.56MB | pt=991.58MB | kv_time=3.905s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:05:08 | INFO | case=90 | id=mass_5/html/0315-01.html | n_tokens=461 | text=1.87KB | kv_est=144.06MB | pt=144.08MB | kv_time=1.022s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:05:09 | INFO | case=91 | id=mass_5/html/0316-01.html | n_tokens=326 | text=1.26KB | kv_est=101.88MB | pt=101.90MB | kv_time=0.627s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:05:12 | INFO | case=92 | id=mass_5/html/0317-01.html | n_tokens=2281 | text=8.91KB | kv_est=712.81MB | pt=712.83MB | kv_time=3.344s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:05:17 | INFO | case=93 | id=mass_5/html/0320-01.html | n_tokens=3487 | text=13.58KB | kv_est=1.06GB | pt=1.06GB | kv_time=4.406s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:05:17 | INFO | case=94 | id=mass_5/html/0326-01.html | n_tokens=254 | text=1021.00B | kv_est=79.38MB | pt=79.40MB | kv_time=0.367s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:05:21 | INFO | case=95 | id=mass_5/html/0327-01.html | n_tokens=3509 | text=13.56KB | kv_est=1.07GB | pt=1.07GB | kv_time=4.345s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:05:22 | INFO | case=96 | id=mass_5/html/0332-01.html | n_tokens=386 | text=1.37KB | kv_est=120.62MB | pt=120.65MB | kv_time=0.555s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:05:24 | INFO | case=97 | id=mass_5/html/0333-01.html | n_tokens=1495 | text=5.37KB | kv_est=467.19MB | pt=467.21MB | kv_time=1.918s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:05:27 | INFO | case=98 | id=mass_5/html/0335-01.html | n_tokens=2143 | text=8.36KB | kv_est=669.69MB | pt=669.71MB | kv_time=2.625s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+2026-03-26 12:05:29 | INFO | case=99 | id=mass_5/html/0338-01.html | n_tokens=1897 | text=7.10KB | kv_est=592.81MB | pt=592.83MB | kv_time=2.265s | gpu_alloc=30.45GB gpu_reserved=30.45GB
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@cccxc502>
+Subject: Job 1183331: <kvcache_mass_oom_fix> in cluster <CCC2_LSF> Exited
+
+Job <kvcache_mass_oom_fix> was submitted from host <ccc-login1> by user <apendyal> in cluster <CCC2_LSF> at Thu Mar 26 11:56:09 2026
+Job was executed on host(s) <cccxc502>, in queue <normal>, as user <apendyal> in cluster <CCC2_LSF> at Thu Mar 26 11:56:16 2026
+</u/apendyal> was used as the home directory.
+</dccstor/nathan-ckpts/anooshka> was used as the working directory.
+Started at Thu Mar 26 11:56:16 2026
+Terminated at Thu Mar 26 12:05:56 2026
+Results reported at Thu Mar 26 12:05:56 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash -lc 'export PATH="$HOME/.local/bin:$PATH";
+            export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True;
+            mkdir -p /dccstor/nathan-ckpts/anooshka/logs;
+            micromamba run -p /u/apendyal/mamba_envs/mellea_py310 \
+              python -u /dccstor/nathan-ckpts/anooshka/kv_cache_dataset_oom_fix.py \
+              --out_root /dccstor/nathan-ckpts/anooshka/caselaw_kv/massachusetts \
+              --log "/dccstor/nathan-ckpts/anooshka/logs/caselaw_kv.${LSB_JOBID}.log"'
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   895.00 sec.
+    Max Memory :                                 30 GB
+    Average Memory :                             6.73 GB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              38
+    Max Threads :                                634
+    Run time :                                   572 sec.
+    Turnaround time :                            587 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file </dccstor/nathan-ckpts/anooshka/logs/err.1183331.txt> for stderr output of this job.
+

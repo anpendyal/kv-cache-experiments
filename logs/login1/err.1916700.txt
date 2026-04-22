@@ -1,0 +1,21 @@
+/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:19<00:59, 19.91s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:41<00:42, 21.15s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [01:03<00:21, 21.25s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:09<00:00, 15.29s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:09<00:00, 17.36s/it]
+Traceback (most recent call last):
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache_dataset.py", line 212, in <module>
+    build_kv_from_dataset(args.out_root, args.log)
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache_dataset.py", line 171, in build_kv_from_dataset
+    _save_dc_cache(backend, text, pt_path)
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache_dataset.py", line 111, in _save_dc_cache
+    result = _make_dc_cache(backend, text, **model_options)
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache_dataset.py", line 102, in _make_dc_cache
+    dc = backend._model(
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/utils/generic.py", line 943, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/models/granite/modeling_granite.py", line 588, in forward
+    logits = logits / self.config.logits_scaling  # main diff with Llama
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.12 GiB. GPU 0 has a total capacity of 79.25 GiB of which 21.94 MiB is free. Including non-PyTorch memory, this process has 79.22 GiB memory in use. Of the allocated memory 65.02 GiB is allocated by PyTorch, and 13.72 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

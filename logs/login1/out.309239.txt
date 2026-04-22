@@ -1,0 +1,48 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@cccxc582>
+Subject: Job 309239: <kvcache_mass_oom_fix> in cluster <CCC2_LSF> Exited
+
+Job <kvcache_mass_oom_fix> was submitted from host <ccc-login1> by user <apendyal> in cluster <CCC2_LSF> at Fri Feb 20 11:44:21 2026
+Job was executed on host(s) <cccxc582>, in queue <normal>, as user <apendyal> in cluster <CCC2_LSF> at Fri Feb 20 11:44:21 2026
+</u/apendyal> was used as the home directory.
+</dccstor/nathan-ckpts/anooshka> was used as the working directory.
+Started at Fri Feb 20 11:44:21 2026
+Terminated at Fri Feb 20 11:59:36 2026
+Results reported at Fri Feb 20 11:59:36 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+bash -lc 'export PATH="$HOME/.local/bin:$PATH";
+            mkdir -p /dccstor/nathan-ckpts/anooshka/logs;
+            micromamba run -p /u/apendyal/mamba_envs/mellea_py310 \
+              python -u /dccstor/nathan-ckpts/anooshka/kv_cache_dataset.py \
+              --out_root /dccstor/nathan-ckpts/anooshka/caselaw_kv/mass \
+              --log "/dccstor/nathan-ckpts/anooshka/logs/caselaw_kv.${LSB_JOBID}.log"'
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   503.64 sec.
+    Max Memory :                                 31 GB
+    Average Memory :                             2.81 GB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              38
+    Max Threads :                                335
+    Run time :                                   914 sec.
+    Turnaround time :                            915 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file </dccstor/nathan-ckpts/anooshka/logs/err.309239.txt> for stderr output of this job.
+

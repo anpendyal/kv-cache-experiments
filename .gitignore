@@ -1,0 +1,6 @@
+*.pt
+*.pth
+mellea/
+caselaw_kv/
+__pycache__/
+*.pyc

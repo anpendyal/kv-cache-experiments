@@ -1,0 +1,27 @@
+/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:23<01:09, 23.21s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:46<00:47, 23.50s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [01:10<00:23, 23.44s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:22<00:00, 19.19s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:22<00:00, 20.74s/it]
+Traceback (most recent call last):
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache_dataset.py", line 309, in <module>
+    build_kv_from_dataset(args.out_root, args.log, limit=args.limit)
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache_dataset.py", line 263, in build_kv_from_dataset
+    kv_bytes, n_tokens, text_bytes = _save_dc_cache(backend, text, pt_path)
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache_dataset.py", line 185, in _save_dc_cache
+    result, n_tokens, text_bytes = _make_dc_cache(backend, text, **model_options)
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache_dataset.py", line 120, in _make_dc_cache
+    out = backend._model(
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/utils/generic.py", line 943, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/models/granite/modeling_granite.py", line 587, in forward
+    logits = self.lm_head(hidden_states[:, slice_indices, :])
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/linear.py", line 125, in forward
+    return F.linear(input, self.weight, self.bias)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.12 GiB. GPU 0 has a total capacity of 79.25 GiB of which 1.55 GiB is free. Including non-PyTorch memory, this process has 77.69 GiB memory in use. Of the allocated memory 68.07 GiB is allocated by PyTorch, and 9.13 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

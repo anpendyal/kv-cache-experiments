@@ -1,0 +1,35 @@
+/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:20<01:01, 20.37s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:42<00:42, 21.19s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [01:03<00:21, 21.42s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:09<00:00, 15.25s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:09<00:00, 17.41s/it]
+Traceback (most recent call last):
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache_dataset_oom_fix.py", line 300, in <module>
+    build_kv_from_dataset(args.out_root, args.log, limit=args.limit)
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache_dataset_oom_fix.py", line 256, in build_kv_from_dataset
+    kv_bytes, n_tokens, text_bytes, pt_size = _save_dc_cache(backend, text, pt_path)
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache_dataset_oom_fix.py", line 152, in _save_dc_cache
+    result, n_tokens, text_bytes = _make_dc_cache(backend, text, **model_options)
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache_dataset_oom_fix.py", line 109, in _make_dc_cache
+    out = backend._model.model( # fix: call base transfomer, skip LM head
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/utils/generic.py", line 943, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/models/granite/modeling_granite.py", line 459, in forward
+    layer_outputs = decoder_layer(
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/modeling_layers.py", line 83, in __call__
+    return super().__call__(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/models/granite/modeling_granite.py", line 290, in forward
+    hidden_states = self.mlp(hidden_states)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/models/granite/modeling_granite.py", line 220, in forward
+    down_proj = self.down_proj(self.act_fn(self.gate_proj(x)) * self.up_proj(x))
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 832.00 MiB. GPU 0 has a total capacity of 39.49 GiB of which 671.38 MiB is free. Including non-PyTorch memory, this process has 38.83 GiB memory in use. Of the allocated memory 38.05 GiB is allocated by PyTorch, and 297.98 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

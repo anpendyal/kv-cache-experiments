@@ -1,0 +1,11 @@
+/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:22<01:07, 22.43s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:44<00:44, 22.49s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [01:06<00:22, 22.22s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:13<00:00, 15.96s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:13<00:00, 18.31s/it]
+Traceback (most recent call last):
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache_dataset.py", line 266, in <module>
+    build_kv_from_dataset(args.out_root, args.log, limit=args.limit)
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache_dataset.py", line 223, in build_kv_from_dataset
+    kv_bytes, n_tokens, text_bytes = _save_dc_cache(backend, text, pt_path)
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache_dataset.py", line 161, in _save_dc_cache
+    result.reset() # explicitly clear the DynamicCache tensors
+AttributeError: 'DynamicCache' object has no attribute 'reset'
