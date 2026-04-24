@@ -1,20 +1,24 @@
+"""
+Reads JurisdictionsMetadata.json and prints the total case count across all jurisdictions.
+"""
+
 import json
 
-# Open and load the JSON file
-with open('JurisdictionsMetadata.json', 'r', encoding='utf-8') as file:
-    data = json.load(file)
+with open('JurisdictionsMetadata.json', 'r', encoding='utf-8') as f:
+    data = json.load(f)
 
 total_case_count = 0
-errors = []
-for jurisdiction in data:
-    
-    print(jurisdiction['name'])
-    try: 
-        total_case_count += jurisdiction['case_count']
-        print(jurisdiction['case_count'])
-    except:
-        errors.append(jurisdiction['name'])
-    print()
+missing = []
 
-print(errors)
-print(total_case_count)
+for jurisdiction in data:
+    try:
+        count = jurisdiction['case_count']
+        total_case_count += count
+        print(f"{jurisdiction['name']}: {count}")
+    except KeyError:
+        missing.append(jurisdiction['name'])
+
+if missing:
+    print(f"Jurisdictions missing case_count: {missing}")
+
+print(f"Total cases: {total_case_count}")
