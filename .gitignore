@@ -4,3 +4,4 @@ mellea/
 caselaw_kv/
 __pycache__/
 *.pyc
+kv_cache_compression.py
