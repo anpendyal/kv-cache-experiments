@@ -167,10 +167,31 @@ def cache_bytes(cache) -> int:
     attributes and summing tensor sizes.
     """
     total = 0
-    for val in vars(cache).values():
+    for val in _cache_attr_values(cache):
         for t in _tensors_in_val(val):
             total += tensor_bytes(t)
     return total
+
+
+# Attribute names that may hold tensors across known transformers cache types:
+# DynamicCache uses key_cache/value_cache; MambaCache / HybridMambaAttentionDynamicCache
+# add conv_states and ssm_states. Checked via hasattr so missing attrs are skipped.
+_KNOWN_CACHE_ATTRS = ("key_cache", "value_cache", "conv_states", "ssm_states")
+
+
+def _cache_attr_values(cache):
+    """Yield the values of all tensor-holding attributes in a cache object.
+
+    Uses vars() when available (dict-backed classes). Falls back to a list of
+    known cache attribute names for __slots__-based types such as
+    HybridMambaAttentionDynamicCache.
+    """
+    try:
+        yield from vars(cache).values()
+    except TypeError:
+        for attr in _KNOWN_CACHE_ATTRS:
+            if hasattr(cache, attr):
+                yield getattr(cache, attr)
 
 
 def _cache_to_cpu(cache) -> None:
@@ -180,7 +201,17 @@ def _cache_to_cpu(cache) -> None:
     For HybridMambaAttentionDynamicCache this covers both the attention
     key/value caches and the Mamba conv_states/ssm_states.
     """
-    for attr, val in vars(cache).items():
+    try:
+        attr_items = list(vars(cache).items())
+    except TypeError:
+        # __slots__-based type (e.g. HybridMambaAttentionDynamicCache)
+        attr_items = [
+            (attr, getattr(cache, attr))
+            for attr in _KNOWN_CACHE_ATTRS
+            if hasattr(cache, attr)
+        ]
+
+    for attr, val in attr_items:
         if torch.is_tensor(val):
             setattr(cache, attr, val.cpu())
         elif isinstance(val, list):
