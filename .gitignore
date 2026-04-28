@@ -5,3 +5,5 @@ caselaw_kv/
 __pycache__/
 *.pyc
 kv_cache_compression.py
+kv_cache_benchmarking.py
+kv_cache_generator.py
