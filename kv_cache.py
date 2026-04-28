@@ -52,6 +52,7 @@ def setup_logger(log_path: str) -> logging.Logger:
         datefmt="%Y-%m-%d %H:%M:%S",
     )
 
+    # Log to file and stdout simultaneously
     fh = logging.FileHandler(log_path, mode="a", encoding="utf-8")
     fh.setFormatter(fmt)
     logger.addHandler(fh)
@@ -64,9 +65,13 @@ def setup_logger(log_path: str) -> logging.Logger:
 
 
 def fmt_bytes(n: int) -> str:
+    """
+    Takes a file size in bytes (an integer) and turns it into a human-readable string
+    """
     units = ["B", "KB", "MB", "GB", "TB"]
     x = float(n)
     for u in units:
+        # Stop when the number is under 1024 (so it fits that unit), or when you hit the last unit (TB) so you don’t run off the end
         if x < 1024.0 or u == units[-1]:
             return f"{x:.2f}{u}"
         x /= 1024.0
@@ -121,6 +126,7 @@ def _make_dc_cache(backend: LocalHFBackend, text: str, max_tokens: int | None, *
 
     dc = DynamicCache()
     with torch.no_grad():
+        # Call the base transformer directly to skip the LM head and avoid allocating the full vocabulary logits tensor
         out = backend._model.model(
             tokens["input_ids"].to(backend._device),
             attention_mask=tokens["attention_mask"].to(backend._device),
@@ -128,8 +134,9 @@ def _make_dc_cache(backend: LocalHFBackend, text: str, max_tokens: int | None, *
             **model_options,
         )
         result = out.past_key_values
-        del out, dc
+        del out, dc # free logits/hidden states immediately to reclaim GPU memory
 
+    # Explicitly delete the GPU tensors
     del tokens
     torch.cuda.empty_cache()
 
@@ -141,6 +148,9 @@ def tensor_bytes(x):
 
 
 def cache_bytes(legacy):
+    # legacy cache is a tuple of per-layer entries; each entry can be a
+    # (key, value) tuple, a dict, or occasionally a bare tensor depending
+    # on the model and transformers version
     total = 0
     for layer in legacy:
         if isinstance(layer, (tuple, list)):
@@ -175,8 +185,8 @@ def _save_dc_cache(
     result, n_tokens, text_bytes = _make_dc_cache(backend, text, max_tokens, **model_options)
 
     # Move KV tensors to CPU before legacy conversion so GPU memory is freed
-    # before serialization (torch.save on GPU tensors pins extra CPU staging buffers)
-    # this fixed the OOM
+    # before serialization (torch.save on GPU tensors pins extra CPU staging buffers).
+    # This fixed the OOM
     result.key_cache = [k.cpu() for k in result.key_cache]
     result.value_cache = [v.cpu() for v in result.value_cache]
     torch.cuda.empty_cache()
@@ -185,7 +195,7 @@ def _save_dc_cache(
     kv_bytes = cache_bytes(legacy)
 
     if benchmark:
-        # Measure serialized size without writing to disk
+        # Serialize to an in-memory buffer to measure .pt size without touching disk
         buf = io.BytesIO()
         torch.save(legacy, buf)
         pt_size = buf.tell()
@@ -201,6 +211,7 @@ def _save_dc_cache(
             torch.save(legacy, ofh)
         pt_size = safe_getsize(out_path)
 
+    # Explicitly clear DynamicCache internals to release CPU memory
     del legacy
     result.key_cache.clear()
     result.value_cache.clear()
@@ -219,9 +230,11 @@ def build_kv_from_dataset(
     limit: int | None = None,
 ):
     # TODO: Check this
+    # LSB_JOBID is set by LSF on CCC; fall back to "local" when running outside a job
     job_id = os.environ.get("LSB_JOBID", "local")
     log_paths = setup_log_paths(logs_dir, job_id)
 
+    # Redirect stderr so uncaught exceptions and warnings go to the error log
     sys.stderr = open(log_paths["error"], "a", encoding="utf-8")
 
     logger = setup_logger(log_paths["actual"])
@@ -231,6 +244,7 @@ def build_kv_from_dataset(
     os.makedirs(out_root, exist_ok=True)
 
     backend = LocalHFBackend(model_id=IBM_GRANITE_3_3_8B)
+    # streaming=True avoids downloading the full dataset upfront
     dataset = load_dataset("common-pile/caselaw_access_project", split="train", streaming=True)
 
     total_cases = 0
@@ -281,6 +295,7 @@ def build_kv_from_dataset(
             skipped_not_reporter += 1
             continue
 
+        # Folder per reporter and volume
         out_dir = os.path.join(out_root, reporter, volume)
         os.makedirs(out_dir, exist_ok=True)
         pt_path = os.path.join(out_dir, page + ".pt")
@@ -290,12 +305,14 @@ def build_kv_from_dataset(
             skipped_already_exists += 1
             continue
 
+        # Time for KV creation for this case
         t0 = time.perf_counter()
         kv_bytes, n_tokens, text_bytes, pt_size = _save_dc_cache(
             backend, text, pt_path, benchmark=benchmark, max_tokens=max_tokens
         )
         dt = time.perf_counter() - t0
 
+        # n_tokens == max_tokens means the document was longer and got truncated
         if max_tokens is not None and n_tokens == max_tokens:
             skipped_max_tokens += 1
             with open(log_paths["skipped_max_tokens"], "a", encoding="utf-8") as f:
