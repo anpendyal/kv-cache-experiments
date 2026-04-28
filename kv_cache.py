@@ -21,7 +21,7 @@ from datasets import load_dataset
 from transformers import DynamicCache
 
 from mellea.backends.huggingface import LocalHFBackend
-from mellea.backends.model_ids import IBM_GRANITE_3_3_8B
+from mellea.backends.model_ids import IBM_GRANITE_4_HYBRID_MICRO
 
 from sort_reporters_to_jurisdiction import load_reporters_for_jurisdiction
 
@@ -243,7 +243,8 @@ def build_kv_from_dataset(
     out_root = os.path.abspath(out_root.rstrip("/"))
     os.makedirs(out_root, exist_ok=True)
 
-    backend = LocalHFBackend(model_id=IBM_GRANITE_3_3_8B)
+    backend = LocalHFBackend(model_id=IBM_GRANITE_4_HYBRID_MICRO)
+    
     # streaming=True avoids downloading the full dataset upfront
     dataset = load_dataset("common-pile/caselaw_access_project", split="train", streaming=True)
 
