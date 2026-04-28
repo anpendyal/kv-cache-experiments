@@ -5,6 +5,7 @@ Reporters belonging to exactly one jurisdiction are filed under that jurisdictio
 name. Reporters spanning multiple jurisdictions (e.g. A.2d) are placed under "Other".
 """
 
+import json
 import unittest
 from typing import Any, Dict, List, Set
 
@@ -15,7 +16,7 @@ def sort_reporters_to_jurisdiction(reporters_metadata: List[Dict[str, Any]]) -> 
 
     Reporters with exactly one jurisdiction are filed under that jurisdiction's 'name'.
     Reporters with zero or multiple jurisdictions are filed under 'Other'.
-    Reporters missing a slug are skipped.
+    Raises ValueError if any reporter entry is missing a slug.
 
     Args:
         reporters_metadata: List of reporter dicts, each with 'slug' and 'jurisdictions' fields.
@@ -41,6 +42,29 @@ def sort_reporters_to_jurisdiction(reporters_metadata: List[Dict[str, Any]]) -> 
             jurisdictions["Other"].add(slug)
 
     return jurisdictions
+
+
+def load_reporters_for_jurisdiction(reporters_metadata_path: str, jurisdiction: str) -> Set[str]:
+    """
+    Loads ReportersMetadata.json and returns the set of reporter slugs for the
+    given jurisdiction. Raises ValueError if the jurisdiction is not found or has
+    no reporters.
+    """
+    with open(reporters_metadata_path, "r", encoding="utf-8") as f:
+        reporters_metadata = json.load(f)
+
+    jurisdiction_map = sort_reporters_to_jurisdiction(reporters_metadata)
+
+    # If jurisdiction is not valid, give a list of valid jurisdictions (except Other) to user
+    if jurisdiction not in jurisdiction_map:
+        available = sorted(k for k in jurisdiction_map if k != "Other")
+        raise ValueError(f"Jurisdiction {jurisdiction!r} not found. Available: {available}")
+
+    reporters = jurisdiction_map[jurisdiction]
+    if not reporters:
+        raise ValueError(f"No reporters found for jurisdiction {jurisdiction!r}.")
+
+    return reporters
 
 
 THOMP_COOK = {
