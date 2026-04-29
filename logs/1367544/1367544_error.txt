@@ -1,0 +1,36 @@
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|█████     | 1/2 [00:12<00:12, 12.25s/it]Fetching 2 files: 100%|██████████| 2/2 [00:12<00:00,  6.12s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [01:00<01:00, 60.14s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:13<00:00, 32.64s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:13<00:00, 36.77s/it]
+Traceback (most recent call last):
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache.py", line 388, in <module>
+    build_kv_from_dataset(
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache.py", line 311, in build_kv_from_dataset
+    kv_bytes, n_tokens, text_bytes, pt_size = _save_dc_cache(
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache.py", line 185, in _save_dc_cache
+    result, n_tokens, text_bytes = _make_dc_cache(backend, text, max_tokens, **model_options)
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache.py", line 130, in _make_dc_cache
+    out = backend._model.model(
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/utils/generic.py", line 943, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/models/granitemoehybrid/modeling_granitemoehybrid.py", line 1346, in forward
+    layer_outputs = decoder_layer(
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/modeling_layers.py", line 83, in __call__
+    return super().__call__(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/models/granitemoehybrid/modeling_granitemoehybrid.py", line 1112, in forward
+    hidden_states = self.mamba(
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/models/granitemoehybrid/modeling_granitemoehybrid.py", line 827, in forward
+    return self.torch_forward(hidden_states, cache_params, cache_position, attention_mask)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/models/granitemoehybrid/modeling_granitemoehybrid.py", line 619, in torch_forward
+    and cache_params.has_previous_state
+AttributeError: 'DynamicCache' object has no attribute 'has_previous_state'

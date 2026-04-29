@@ -1,0 +1,4 @@
+/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/utils/hub.py:111: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+The fast path is not available because on of `(selective_state_update, causal_conv1d_fn, causal_conv1d_update)` is None. Falling back to the naive implementation. To install follow https://github.com/state-spaces/mamba/#installation and https://github.com/Dao-AILab/causal-conv1d
+GraniteMoeHybrid requires an initialized `HybridMambaAttentionDynamicCache` to return a cache. Because one was not provided, no cache will be returned.

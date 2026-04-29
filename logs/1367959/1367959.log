@@ -1,0 +1,2 @@
+2026-04-28 18:00:27 | INFO | mode=benchmark | max_tokens=17000 | reporters=['davis-l-ct-cas', 'mass', 'mass-app-ct', 'mass-app-dec', 'mass-app-div', 'mass-app-div-annual', 'mass-l-rptr', 'mass-supp', 'rec-co-ct', 'rep-cont-el', 'rep-cont-elect-case', 'super-ct-jud']
+2026-04-28 18:02:44 | INFO | case=1 | id=mass_5/html/0001-01.html | n_tokens=4350 | text=19.74KB | kv_est=0.00B | pt=1.23KB | kv_time=4.349s | gpu_alloc=11.92GB gpu_reserved=11.94GB
