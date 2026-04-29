@@ -18,9 +18,9 @@ import time
 
 import torch
 from datasets import load_dataset
+from transformers import DynamicCache
 
 from mellea.backends.huggingface import LocalHFBackend
-from mellea.backends.model_ids import IBM_GRANITE_4_HYBRID_MICRO
 
 from sort_reporters_to_jurisdiction import load_reporters_for_jurisdiction
 
@@ -64,9 +64,13 @@ def setup_logger(log_path: str) -> logging.Logger:
 
 
 def fmt_bytes(n: int) -> str:
+    """
+    Takes a file size in bytes (an integer) and turns it into a human-readable string
+    """
     units = ["B", "KB", "MB", "GB", "TB"]
     x = float(n)
     for u in units:
+        # Stop when the number is under 1024 (so it fits that unit), or when you hit the last unit (TB) so you don’t run off the end
         if x < 1024.0 or u == units[-1]:
             return f"{x:.2f}{u}"
         x /= 1024.0
@@ -119,22 +123,19 @@ def _make_dc_cache(backend: LocalHFBackend, text: str, max_tokens: int | None, *
 
     n_tokens = int(tokens["input_ids"].shape[1])
 
+    dc = DynamicCache()
     with torch.no_grad():
-        # Call the base transformer directly to skip the LM head and avoid
-        # allocating the full vocabulary logits tensor.
-        # Pass past_key_values=None so the model instantiates the correct cache
-        # type for its architecture (e.g. HybridMambaAttentionDynamicCache for
-        # GraniteMoeHybrid, which has both attention and Mamba layers).
+        # Call the base transformer directly to skip the LM head and avoid allocating the full vocabulary logits tensor
         out = backend._model.model(
             tokens["input_ids"].to(backend._device),
             attention_mask=tokens["attention_mask"].to(backend._device),
-            past_key_values=None,
-            use_cache=True,
+            past_key_values=dc,
             **model_options,
         )
         result = out.past_key_values
-        del out  # free hidden states immediately to reclaim GPU memory
+        del out, dc # free logits/hidden states immediately to reclaim GPU memory
 
+    # Explicitly delete the GPU tensors
     del tokens
     torch.cuda.empty_cache()
 
@@ -145,79 +146,23 @@ def tensor_bytes(x):
     return x.numel() * x.element_size()
 
 
-def _tensors_in_val(val):
-    """Yield all tensors nested inside a value (tensor, list, or dict)."""
-    if torch.is_tensor(val):
-        yield val
-    elif isinstance(val, (list, tuple)):
-        for t in val:
-            if torch.is_tensor(t):
-                yield t
-    elif isinstance(val, dict):
-        for t in val.values():
-            if torch.is_tensor(t):
-                yield t
-
-
-def cache_bytes(cache) -> int:
-    """Count the total bytes of all tensors stored in a cache object.
-
-    Works with any transformers cache type (DynamicCache,
-    HybridMambaAttentionDynamicCache, etc.) by iterating over instance
-    attributes and summing tensor sizes.
-    """
+def cache_bytes(legacy):
+    # legacy cache is a tuple of per-layer entries; each entry can be a
+    # (key, value) tuple, a dict, or occasionally a bare tensor depending
+    # on the model and transformers version
     total = 0
-    for val in _cache_attr_values(cache):
-        for t in _tensors_in_val(val):
-            total += tensor_bytes(t)
+    for layer in legacy:
+        if isinstance(layer, (tuple, list)):
+            for t in layer:
+                if torch.is_tensor(t):
+                    total += tensor_bytes(t)
+        elif isinstance(layer, dict):
+            for t in layer.values():
+                if torch.is_tensor(t):
+                    total += tensor_bytes(t)
+        elif torch.is_tensor(layer):
+            total += tensor_bytes(layer)
     return total
-
-
-# Attribute names that may hold tensors across known transformers cache types:
-# DynamicCache uses key_cache/value_cache; MambaCache / HybridMambaAttentionDynamicCache
-# add conv_states and ssm_states. Checked via hasattr so missing attrs are skipped.
-_KNOWN_CACHE_ATTRS = ("key_cache", "value_cache", "conv_states", "ssm_states")
-
-
-def _cache_attr_values(cache):
-    """Yield the values of all tensor-holding attributes in a cache object.
-
-    Uses vars() when available (dict-backed classes). Falls back to a list of
-    known cache attribute names for __slots__-based types such as
-    HybridMambaAttentionDynamicCache.
-    """
-    try:
-        yield from vars(cache).values()
-    except TypeError:
-        for attr in _KNOWN_CACHE_ATTRS:
-            if hasattr(cache, attr):
-                yield getattr(cache, attr)
-
-
-def _cache_to_cpu(cache) -> None:
-    """Move all tensors in a cache object to CPU in-place.
-
-    Handles the instance attributes of any transformers cache type.
-    For HybridMambaAttentionDynamicCache this covers both the attention
-    key/value caches and the Mamba conv_states/ssm_states.
-    """
-    try:
-        attr_items = list(vars(cache).items())
-    except TypeError:
-        # __slots__-based type (e.g. HybridMambaAttentionDynamicCache)
-        attr_items = [
-            (attr, getattr(cache, attr))
-            for attr in _KNOWN_CACHE_ATTRS
-            if hasattr(cache, attr)
-        ]
-
-    for attr, val in attr_items:
-        if torch.is_tensor(val):
-            setattr(cache, attr, val.cpu())
-        elif isinstance(val, list):
-            setattr(cache, attr, [t.cpu() if torch.is_tensor(t) else t for t in val])
-        elif isinstance(val, dict):
-            setattr(cache, attr, {k: v.cpu() if torch.is_tensor(v) else v for k, v in val.items()})
 
 
 def gpu_mem():
@@ -238,29 +183,37 @@ def _save_dc_cache(
 ):
     result, n_tokens, text_bytes = _make_dc_cache(backend, text, max_tokens, **model_options)
 
-    # Move all cache tensors to CPU before serialization to free GPU staging
-    # buffers. torch.save on GPU tensors pins extra CPU staging memory, which
-    # caused OOM before this fix was applied. _cache_to_cpu handles both
-    # attention key/value caches and Mamba conv_states/ssm_states.
-    _cache_to_cpu(result)
+    # Move KV tensors to CPU before legacy conversion so GPU memory is freed
+    # before serialization (torch.save on GPU tensors pins extra CPU staging buffers).
+    # This fixed the OOM
+    result.key_cache = [k.cpu() for k in result.key_cache]
+    result.value_cache = [v.cpu() for v in result.value_cache]
     torch.cuda.empty_cache()
 
-    kv_bytes = cache_bytes(result)
+    legacy = result.to_legacy_cache()
+    kv_bytes = cache_bytes(legacy)
 
     if benchmark:
         # Serialize to an in-memory buffer to measure .pt size without touching disk
         buf = io.BytesIO()
-        torch.save(result, buf)
+        torch.save(legacy, buf)
         pt_size = buf.tell()
         del buf
     else:
+        # Ensure parent directory exists
         out_dir = os.path.dirname(out_path)
+
+        # Only try to create directories when there actually is a directory component
         if out_dir:
             os.makedirs(out_dir, exist_ok=True)
         with open(out_path, "wb") as ofh:
-            torch.save(result, ofh)
+            torch.save(legacy, ofh)
         pt_size = safe_getsize(out_path)
 
+    # Explicitly clear DynamicCache internals to release CPU memory
+    del legacy
+    result.key_cache.clear()
+    result.value_cache.clear()
     del result
     torch.cuda.empty_cache()
 
@@ -275,6 +228,7 @@ def build_kv_from_dataset(
     max_tokens: int | None,
     limit: int | None = None,
 ):
+    # TODO: Check this
     # LSB_JOBID is set by LSF on CCC; fall back to "local" when running outside a job
     job_id = os.environ.get("LSB_JOBID", "local")
     log_paths = setup_log_paths(logs_dir, job_id)
@@ -288,7 +242,7 @@ def build_kv_from_dataset(
     out_root = os.path.abspath(out_root.rstrip("/"))
     os.makedirs(out_root, exist_ok=True)
 
-    backend = LocalHFBackend(model_id=IBM_GRANITE_4_HYBRID_MICRO)
+    backend = LocalHFBackend(model_id="ibm-granite/granite-4.0-micro")
     # streaming=True avoids downloading the full dataset upfront
     dataset = load_dataset("common-pile/caselaw_access_project", split="train", streaming=True)
 
@@ -340,15 +294,17 @@ def build_kv_from_dataset(
             skipped_not_reporter += 1
             continue
 
+        # Folder per reporter and volume
         out_dir = os.path.join(out_root, reporter, volume)
         os.makedirs(out_dir, exist_ok=True)
         pt_path = os.path.join(out_dir, page + ".pt")
 
-        # In benchmark mode we never write .pt files, so nothing can already exist
+        # In benchmark mode, we never write .pt files to disk, so the file can never already exist
         if not benchmark and os.path.exists(pt_path):
             skipped_already_exists += 1
             continue
 
+        # Time for KV creation for this case
         t0 = time.perf_counter()
         kv_bytes, n_tokens, text_bytes, pt_size = _save_dc_cache(
             backend, text, pt_path, benchmark=benchmark, max_tokens=max_tokens
