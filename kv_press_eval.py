@@ -6,11 +6,14 @@ from kvpress import KVzipPress, ObservedAttentionPress
 # KVzipPress, 
 # kvpress/kvpress/presses/observed_attention_press.py
 
-model = "Qwen/Qwen3-8B"
+
+# model = "Qwen/Qwen3-8B"
+model = "ibm-granite/granite-3.3-8b-instruct"
+# pipe = pipeline("kv-press-text-generation", model=model, device_map="auto", dtype="auto", model_kwargs={"attn_implementation": "eager"})
 pipe = pipeline("kv-press-text-generation", model=model, device_map="auto", dtype="auto", model_kwargs={"attn_implementation": "eager"})
 
 context = "My dog's name is Shmeegus. He is green and slimy. He does not like cats, but he does like baths."
-question = "\nDoes Shmeegus like baths?"  # optional
+question = "\nDoes Shmeegus like baths?"
 
 press = ObservedAttentionPress(compression_ratio=0.5)
 answer = pipe(context, question=question, press=press)["answer"]
