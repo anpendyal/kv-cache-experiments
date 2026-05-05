@@ -1,0 +1,108 @@
+Linda M. Don vs. William W. Soo Hoo.
+No. 08-P-465.
+
+Suffolk.
+
+December 9, 2008.
+
+August 26, 2009.
+
+Present: McHugh, Brown, & Vuono, JJ.
+
+Practice, Civil, Judgment notwithstanding verdict. Attorney at Law, Malpractice, Negligence. Contract, Implied covenant of good faith and fair dealing, Performance and breach, Damages. Limitations, Statute of.
+
+A Boston Municipal Court judge did not err in denying a motion for judgment notwithstanding the verdict, brought by the defendant attorney in a legal malpractice case on the ground that the prevailing plaintiff had incurred no damages, where the evidence supported the jury’s finding that but for the defendant’s negligence in failing to timely file the plaintiff’s bankruptcy action, the plaintiff would have obtained a better result, which clearly constituted a breach of contract entitling the defendant to recovery of the fee paid to the defendant and damages based on the undischarged debts, for which the defendant could still be liable. [83-87] Brown, J., concurring.
+
+Civil action commenced in the Boston Municipal Court Department on September 23, 2005.
+
+The case was tried before Robert J. McKenna, J.
+
+Richard L. Neumeier for the defendant.
+
+Stephen F. Gordon for the plaintiff.
+
+McHugh, J.
+
+A jury trial in a legal malpractice case brought by Linda M. Don against her former lawyer, William W. Soo Hoo, produced a verdict in favor of Don in the total amount of $16,913. Claiming that the damages are entirely speculative and without foundation, and thus the Appellate Division of the Boston Municipal Court erred in affirming the denial of his motion for judgment notwithstanding the verdict, Soo Hoo appeals. We affirm.
+
+Background. In December, 2000, Don, then a self-employed jewelry maker earning about $8,000 annually, retained the law office of Soo Hoo to file a Chapter 7 bankruptcy petition so *81that she could shed credit card debt then amounting to slightly more than $11,000. Soo Hoo agreed to file the petition, and Don paid him a fee of $1,000.
+
+Soo Hoo assigned the case to an associate in his office, who forgot to file the petition. Soo Hoo discovered the problem in 2003, disclosed it to Don, and had her sign a new bankruptcy petition that he promptly filed. In 2003, however, Don was employed as a secretary and was earning approximately $30,000 annually. Those earnings led the bankruptcy trustee to conclude that she could afford to pay her debts and to move for dismissal of the petition. The United States Bankruptcy Court for the District of Massachusetts granted the motion, and the petition was dismissed. As a result, Don did not obtain the discharge she anticipated when she engaged Soo Hoo’s services.
+
+After discovering that the initial petition had not been filed, Soo Hoo offered to pay Don’s creditors himself, though he never did because Don’s new attorney asked him to pay Don directly. Soo Hoo declined to do so. Don, herself, did not pay the debts at issue. Instead, she sued Soo Hoo and his associate for negligence, breach of contract, breach of the implied covenant of good faith and fair dealing, and violation of G. L. c. 93A.
+
+After a jury trial in February, 2007, on the first three counts, the jury awarded Don a total of $16,913: $11,413 on the negligence claim, $1,000 on the claim for breach of contract, and $4,500 on the claim for breach of the covenant of good faith and fair dealing.1 The judge, who had reserved the claim under G. L. c. 93A to himself, found in favor of Soo Hoo and ordered that claim dismissed.
+
+Soo Hoo, who had unsuccessfully moved for a directed verdict at the close of all the evidence, see Mass.R.Civ.P. 50(a), 365 Mass. 814 (1974), moved for entry of judgment notwithstanding the verdict (judgment n.o.v.), see Mass.R.Civ.P. 50(b), as amended, 428 Mass. 1402 (1998), on grounds that the plaintiff had incurred no damages because she never paid the debts, which he argued were barred by the statute of limitations by the time of trial.2 *82Don countered by saying that there was no evidence that the statute of limitations had run3 and that, unlike the bankruptcy discharge she would have obtained if Soo Hoo had filed a timely petition, running of the statute would not bar creditor lawsuits.4 If creditors sued, she claimed, she would have to assert the statute of limitations “at her own expense.”5
+
+The judge denied Soo Hoo’s motion and the Appellate Division of the Boston Municipal Court affirmed, reasoning that Soo Hoo’s failure to file the bankruptcy petition led the plaintiff to lose
+
+“any opportunity to discharge her debts in bankruptcy and prevent further [delinquency] notices.
+“That Don had not paid her creditors out of pocket need not translate that her damages are speculative or hypothetical. ... It was fair for the jury to infer that but for Soo Hoo’s omissions, [the debts] could reasonably have been discharged.
+“Finally, the record lacks any evidence whatsoever that the statute of limitations had run on each of the debts for which Don sought a discharge.”
+Soo Hoo appeals, maintaining that the plaintiff failed to offer anything more than speculation on the subject of damages. Don agreed that she paid none of the relevant debts by the time of trial and that no creditor had by then filed a collection action. Still, she argues that she suffered a lost opportunity to obtain a *83bankruptcy discharge, which would have eliminated the continuing threat of litigation she claims she now faces.
+
+Discussion. In reviewing the denial of the motion for judgment n.o.v., we consider “whether, on any reasonable view of the evidence, there is a combination of facts from which a rational inference may be drawn in the plaintiff’s favor” to support each element of the verdict. Poly v. Moylan, 423 Mass. 141, 145 (1996), cert. denied sub nom. Poly v. Cargill, 519 U.S. 1114 (1997). A legal malpractice plaintiff must prove she “probably would have obtained a better result had the attorney exercised adequate skill and care.” Ibid, (affirming judgment n.o.v. where plaintiff did not prove that but for his lawyer’s negligence, he would have obtained relief).
+
+Here, the evidence supported the jury’s finding that but for Soo Hoo’s negligence, Don would have obtained a better result, specifically, a discharge of her debts in 2000 or shortly thereafter. In his motion for judgment n.o.v., Soo Hoo acknowledged that “a jury was free to find that [he] was negligent in not supervising his associate who was supposed to file a bankruptcy petition.”6 The evidence also supported verdicts against Soo Hoo on the counts for breach of contract and breach of the implied covenant of good faith and fair dealing. See Owen v. Kessler, 56 Mass. App. Ct. 466, 471 (2002), quoting from Anthony’s Pier Four, Inc. v. HBC Assocs., 411 Mass. 451, 471-472 (1991) (“The implied covenant of good faith and fair dealing provides ‘that neither party shall do anything that will have the effect of destroying or injuring the right of the other party to receive the fruits of the contract’ ”).
+
+The damages the jury awarded fell into two categories, the fee Don paid Soo Hoo to file the bankruptcy action and damages flowing from his failure to do so. Neither category, according to Soo Hoo, is recoverable.
+
+*84Insofar as the fee is concerned, Soo Hoo argues as follows:
+
+“Don does not disagree that Soo Hoo’s office actually performed services. She had an expectation that, in return for paying $1,000 as legal fee, she would not have to pay her credit card debt incurred as of the end of 2000. This expectation has been met.”
+In other words, Soo Hoo’s argument is that when a client pays a lawyer a fee to perform certain services and the lawyer does not perform the services or performs them negligently, but the client obtains the desired result for reasons wholly independent of the lawyer’s effort, the lawyer has earned his fee. The argument is creative but wholly unpersuasive. The contract between Don and Soo Hoo required Soo Hoo to file a bankruptcy petition. Because no time for filing the petition was specified, a reasonable time was implied, as the judge instructed the jury. See, e.g., Alexander v. Berman, 29 Mass. App. Ct. 458, 461 (1990). The evidence permitted the jury to conclude that Soo Hoo did not file the petition within a reasonable time and that, when he finally got around to it, the petition was ineffective because Don’s economic circumstances had changed.
+
+Soo Hoo’s inaction was clearly a breach of contract that entitled Don to damages. One measure of damages for that breach is the amount Don paid Soo Hoo for the services Soo Hoo did not perform. See generally, e.g., Stark v. Patalano Ford Sales, Inc., 30 Mass. App. Ct. 194, 201 (1991). To be sure, breach of a contract for services ordinarily does not entitle the plaintiff to recover both the amount paid for the unperformed services and the benefit he would have received if they had been performed, for the value of the anticipated benefit is necessarily reduced by the cost of obtaining it. See generally, e.g., Fecteau Benefits Group, Inc. v. Knox, 72 Mass. App. Ct. 204, 209 (2008). In this case, however, Soo Hoo never argued in the District Court that Don was entitled either to the amount she paid Soo Hoo or the benefit of the bargain but not both, nor did he make that argument in the Appellate Division, and he does not make it here. Instead, he has consistently argued that Don suffered no damages at all. Consequently, any claim regarding double recovery is waived. See, e.g., Gossels v. Fleet Natl. Bank, 453 Mass. 366, 371 (2009).
+
+*85Damages based on the undischarged debts present a closer question. A “plaintiff has the burden of proving [her] damages ‘with reasonable certainty.’ ” Coady v. Wellfleet Marine Corp., 62 Mass. App. Ct. 237, 245 (2004), quoting from Agoos Leather Cos. v. American & Foreign Ins. Co., 342 Mass. 603, 608 (1961). Although “proof of damages does not require mathematical precision, it must be based on more than mere speculation.” Squeri v. McCarrick, 32 Mass. App. Ct. 203, 209 (1992) (reversing award where “jury had no evidence whatever to guide them in placing a value on the extracurricular pursuits of one holding a doctorate in anthropology” where the plaintiff claimed that he could have earned an unspecified sum from publishing, lecturing, consulting, and photography).
+
+The essential requirement is that a plaintiff have some basis for permitting the jury to make a reasoned judgment that the plaintiff is likely to incur damages in a specified amount. As with other elements of a plaintiff’s case, proof by a preponderance of the evidence is all the law requires. For example, in Rombola v. Cosindas, 351 Mass. 382, 385-386 (1966), the Supreme Judicial Court held that a judge improperly allowed a motion for a directed verdict at the close of the plaintiff’s opening in a case where the plaintiff sought damages based on lost future earnings of a race horse. In so doing, the court stated:
+
+“It appears that Margy Sampson [the horse] had already been accepted as a participant in the stake races and transported to the site of the meet. She had already proved her ability both prior to and while under [the plaintiff’s] management and training, over an extended period of time, against many competitors and under varying track conditions. Her consistent performance in the year subsequent to the breach negates any basis for an inference of a diminution in ability or in earning capacity at the time of the Suffolk Downs meet. While it is possible that no profits would have been realized if Margy Sampson had participated in the scheduled stake races, that possibility is inherent in any business venture. It is not sufficient to foreclose [the plaintiff’s] right to prove prospective profits.”
+See also City Welding & Mfg. Co. v. Gidley-Eschenheimer Corp., 16 Mass. App. Ct. 372, 375 (1983) (“evidence of lost profits, *86while somewhat meager, was sufficient to support the judge’s findings”); Our Lady of the Sea Corp. v. Borges, 40 Mass. App. Ct. 484, 489 (1996) (basis for determining damages need not be apparent from the face of the record, as long as it finds support in the record); Coady v. Wellfleet Marine Corp., supra at 245 (basis for awarding damages was sufficient where witness testified on direct examination that the harm, loss of a permanent mooring, would likely last for between ten and fifteen years, even though the witness testified on cross-examination that there were too many variables to say with certainty when a slip would become available and that precise estimates of availability lay in the realm of “speculation”).
+
+Here, abundant evidence documented the credit card debt Don owed and supports the amount the jury awarded.7 The real question on damages was whether, even without a discharge in bankruptcy, Don would have to pay that debt. On that score, the jury had evidence of a stream of demand letters from the credit card companies, collection agencies, and lawyers, sometimes punctuated by long intervals, the latest of which was sent about fourteen months before the trial. That evidence provided a permissible basis for the jury to conclude that creditors likely retained sufficient enthusiasm to pursue Don for the money she owed and that the fourteen-month interval since their most recent letter did not signal their permanent surrender.8 Moreover, evidence of Don’s employment status and earnings gave the jury a basis to infer that she no longer was “judgment proof” and that collection efforts would in fact cause her harm, at least as to the amount of the debt she owed.
+
+Finally, this was not a creditor’s debt collection case, so the statute of limitations was relevant only as evidence of the likeli*87hood that Don would or would not have to pay the debts she had hired Soo Hoo to discharge.9 Statutes often play an evidentiary role of that type. See, e.g., MacDonald v. Ortho Pharmaceutical Corp., 394 Mass. 131, 140 (1985); Iannacchino v. Ford Motor Co., 451 Mass. 623, 634 n.18 (2008). In order to play that role, however, they must be introduced in evidence through judicial notice or otherwise. See, e.g., Commonwealth v Burke, 20 Mass. App. Ct. 489, 512 (1985). Soo Hoo made no effort to do so and could not cure that omission in a postverdict argument about un-enforceability of the debts. Indeed, the record does not even contain the credit card agreements that gave rise to Don’s debt and some of the debt collection letters came from other States. The record does not clearly reveal, therefore, that Massachusetts law is in fact the source of the applicable limitations statutes.10
+
+Decision and order of the Appellate Division affirmed.
+
+1
+See note 7, infra. The jury also found that the associate was negligent, but that her negligence caused Don no damage. The associate is not a party to this appeal.
+
+2
+Neither Don nor Soo Hoo offered evidence of the statute of limitations at *82trial, though Soo Hoo referenced it in a general sense in his motion for a directed verdict at the close of the evidence, and both attorneys referred to it in their summations.
+
+3
+The Massachusetts statute of limitations on contract claims, if applicable, is six years. G. L. c. 260, § 2. Don, however, points to an exception in G. L. c. 260, § 1, for contracts under seal, to which a twenty-year limitation applies.
+
+4
+Under 11 U.S.C. § 524(a)(2) (2006), a discharge “operates as an injunction against the commencement or continuation of an action, the employment of process, or an act, to collect, recover or offset any such debt as a personal liability of the debtor.”
+
+5
+Don also argued that Soo Hoo’s malpractice caused her to have the 2003 failed bankruptcy on her credit report and claimed that creditors could, therefore, assume that she had engaged in fraudulent conduct. There was no evidence of that, and Don does not pursue this argument on appeal.
+
+6
+Although no evidence specifically focused on whether a promptly filed bankruptcy petition would have resulted in Don’s discharge, see, e.g., Fishman v. Brooks, 396 Mass. 643, 647 (1986), Soo Hoo testified at trial that, after discovering the failure to file, he repeatedly offered to pay Don’s creditors. The jury were entitled to treat that testimony as an admission of liability. Cf., e.g., Cassidy v. Hollingsworth, 324 Mass. 424, 425-426 (1949) (defendant’s postaccident statement that “I guess I owe you a fender” held to be an admission of liability). Soo Hoo makes no argument here that the evidence on liability was insufficient.
+
+7
+The damages awarded on the negligence claim amounted to $11,413, an amount which approximated an early creditor claim the jury had before them. The jury’s award of $1,000 was the amount Don had paid Soo Hoo for his services. The award of $4,500 for violation of the covenant of good faith and fair dealing approximates the difference between what the jury could have concluded was Don’s debt within a reasonable period after she engaged Soo Hoo’s services and her debt when Soo Hoo actually filed the bankruptcy petition in August, 2003.
+
+8
+The letters were dated November 13, 2001; November 28, 2001; December 5, 2002; February 3, 2003 (two letters); February 16, 2003; August 9, 2004 (two letters); September 13, 2004; February 11, 2005; March 21, 2005; and December 20, 2005.
+
+9
+In that regard, it is important to remember that the statute does not extinguish the underlying obligation. Instead, if properly asserted, the statute makes the obligation unenforceable in a court. Nevertheless, the debts may be collected in other ways. See Groden v. Kelley, 382 Mass. 333, 335-336 (1981); Webster v. Kowal, 394 Mass. 443, 447-448 (1985), and cases cited.
+
+10
+We decline Don’s request for costs pursuant to Mass.R.A.P. 25, as appearing in 376 Mass. 949 (1979), as Soo Hoo’s appeal, though unsuccessful, is not frivolous. See, e.g., Avery v. Steele, 414 Mass. 450, 455 (1993).
+
+Brown, J.
+
+(concurring). I fully concur in the well-crafted majority opinion. I write separately, however, to mention one more time how I am amazed at the amount of unnecessary litigation and the potential unintended consequences that are often spawned. “Litigation should be a last resort, not the first option.” Petricca Constr. Co. v. Commonwealth, 37 Mass. App. Ct. 392, 401 (1994) (Brown J., concurring). “Rational thought and wise counseling are available at far less expense^] ” Ibid. And, I might add, much less professional embarrassment.1
+
+The defendant knew full well he had made a serious misstep. If he had merely paid the plaintiff the money, as she requested, all the parties could have said “check, please.”
+
+1
+An adverse ruling in a legal malpractice suit likely could have been avoided.

@@ -1,0 +1,86 @@
+Boston Teachers Union, Local 66, MFT AFT, AFL-CIO v. City of Boston School Committee et al.
+Superior Court, Suffolk, SS
+
+No. 20061026C
+
+Memorandum Dated May 7, 2007
+
+Lauriat, Peter M., J.
+
+The plaintiff, Boston Teachers Union, Local 66, MFT AFT, AFL-CIO (“the Union”), filed a Complaint and Application to Vacate an Arbitrator’s Award pursuant to G.L.c. 150C, §11. The defendants, City of Boston School Committee, Thomas W. Payz-ant,1 and Boston Public Schools (collectively “the School Committee”), filed an Answer and a Counterclaim for Confirmation of the Arbitrator’s Award. This matter is before the court on the Union’s Motion for Summary Judgment and the School Committee’s Motion for Judgment on the Pleadings.2 For the following reasons, the Union’s Motion for Summary Judgment is denied, the School Committee’s Motion for Judgment on the Pleadings is allowed, and the arbitration award is confirmed pursuant to G.L.c. 150C, §10.
+
+FACTUAL BACKGROUND
+
+On September 1, 2003, the Union and the School Committee became parties to a collective bargaining agreement (“CBA”).3 The CBA covered a variety of employees working for the School Committee, including Supervisors of Attendance (“Supervisors”).4 Su*14pervisors, under the direction of the School Committee, ensured compliance with Massachusetts’ school attendance law.5
+
+The job requirements for Supervisors sometimes required work outside of normal working hours. Supervisors acquired most of their workload from “attendance cards” that were filled out by school administrators. After receiving the “attendance cards,” Supervisors would contact the student’s parent(s) or guardian(s) in order to ascertain the reason(s) for the absences. In addition, Supervisors also performed address verifications in order to ensure compliance with Boston residency requirements.
+
+The CBA outlined many different employee-related requirements, including student-teacher ratios. Moreover, the CBA set forth ratios for nurses, guidance counselors, and speech therapists. Significantly, the CBA did not contain any ratios or workload formulas for Supervisors. The Union and School Committee agreed to follow specific procedures when new issues arose that were not covered under the CBA. Accordingly, Article 1(E) of the CBA (“the new issues clause”) provided that:
+
+Matters of collective bargaining import not covered by this Agreement may, during the life of the Agreement, be handled in the following manner:
+By the Committee: Except as any change may be commanded by law, the Committee will continue its policies as outlined herein. With respect to matters not covered by this Agreement which are mandatory subjects for collective bargaining, the Committee agrees it will make no changes without prior consultation and negotiation with the Union.
+By the Union: In any matter not covered by this Agreement which is a mandatory subject for collective bargaining, the Union may raise such issue with the Committee for consultation and negotiation; except that (other than as set forth later in this section E) the Union shall not renew or seek to renew any question introduced, debated, and settled, either negatively or affirmatively during the bargaining prior to final settlement. This restriction shall not apply to the areas outlined in Section C above as subjects for continuing consultation.
+In addition to the new issues clause, the CBA also outlined the procedures for filing a grievance. Under Article X (“the dispute resolution clause”), the CBA outlined the various methods for resolving disputes. If the dispute resulted in arbitration, the arbitration proceeding as set forth in Article X(E)(2) was limited as follows:
+
+Notwithstanding anything to the contrary, no dispute or controversy shall be a subject for arbitration unless it involves the meaning, interpretation, or application of an express provision of this Agreement. The arbitrator shall have no power to alter, add to, subtract from, or modify any provision of this Agreement. The parties are agreed that no restrictions are intended on the powers of the Committee except those set forth in the language of this Agreement.
+During 2001-2002, there were eleven Supervisors working for the School Committee. In accordance with past practice, the Supervisors divided up their workload among themselves. Thus, each City of Boston school was part of a “cluster” that was covered by one or two Supervisors. In addition to covering schools, one Supervisor worked solely with the Boston Juvenile Court.
+
+During 2002-2003, the number of school-based Supervisors was reduced to seven due to retirements and budgetary lay-offs.6 As a result of these staffing changes, the Supervisors met among themselves and reapportioned the workload and “clusters.” Some of the Supervisors complained that they had more work to perform than in the previous year.7 In September 2002, a dispute arose between the Union and School Committee regarding the impact of the School Committee’s reduction in the numbers of Supervisors. The Union filed a grievance alleging that the School Committee unilaterally increased the workload of the remaining Supervisors, without negotiation with the Union, in violation of Article 1(E). Specifically, the Union argued that the “workload” and hence the “conditions of employment” of the remaining supervisors were changed without negotiation. After exhausting the grievance process, the parties submitted their dispute to final and binding arbitration. At a hearing on November 25, 2003, before Arbitrator Gary J. Wooters (“the arbitrator”), the parties stipulated to the following issue for resolution:
+
+Did the Boston Public Schools violate the collective bargaining agreement? If so, what shall be the remedy?
+The arbitrator initially determined that “[i]n order to prevail on this matter, the union must show that: (1) the employer acted unilaterally; (2) that the change increased the workload of the supervisors; (3) that workload is a mandatory subject of bargaining; and (4) that this is a matter not covered by the contract in effect at the time.” Arbitrator’s Decision, 20.
+
+In addressing whether the School Committee acted unilaterally in increasing the workload of the Supervisors, the arbitrator recognized that typically “[w]or-kload is a condition of employment and a mandatory subject of bargaining under the public employee collective bargaining law.” Id. The arbitrator noted, however, that in these circumstances “ ‘workload’ means duties required of employees.” Id. (emphasis added). The arbitrator emphasized that “(Supervisors were never ordered to work longer hours or take work home.” Id. at 21. Further, it was noted that the Supervisors “were never disciplined or criticized for not finishing any particular amount of work during a given *15time.” Id. The arbitrator concluded, in relevant part, as follows:
+
+More schools to service and more referrals from those schools does not necessarily equate to more work for supervisors. It is possible that they spent less time on some cases than they might if the volume was not so high. A case which might, in a prior year, have caused a parental visit, might now be handled with a letter. A telephone call might be made rather than drafting a letter. The supervisors had the discretion to determine how to handle individual cases. They could, therefore, do more cases in less time by spending less time per case. Or, work during busy periods would simply take longer to get to.
+[I]t is not clear that these employees ever had an established number of schools which the administration changed in 2002-03. The number of supervisors has varied and those employees, whatever their number, have divided up the schools.
+The evidence must still show that the workload actually increased. Here, the evidence shows that some employees chose take more work home than in the past. It is not clear to me that this constitutes a unilateral change by the employer.
+The arbitrator also found that the subject of Supervisors’ “workload” may have been covered by the CBA. It was noted that “the Committee has already bargained with the Union over the general subject matter of workload and caseload” for other employees covered by the CBA.8 Id. at 23. The arbitrator stated that “[t]his pattern strongly suggests that the parties have bargained over the subject matter of workload and that the contract is intended to represent the complete agreement on this topic. As such, there would be no obligation to bargain with the Union mid-term on this matter.” Id. at 24. Accordingly, the arbitrator concluded that “workload does not amount to ‘matters not covered by this agreement which are mandatory subjects for collective bargaining’ within the meaning of Article 1, Section E.”9 Id. at 24.
+
+DISCUSSION
+
+Judicial review of an arbitrator’s award is narrow in scope. Lyons v. Sch. Comm. of Dedham, 440 Mass. 74, 77 (2003). “[A]bsent fraud, corruption, or certain procedural irregularities . . . the Superior Court . . . may vacate an award only if the arbitrator has exceeded his powers. Neither error of fact nor error of law provides grounds for vacating an award.” Sch. Dist. of Beverly v. Geller, 50 Mass.App.Ct. 290, 293 (2000) (citations omitted). Thus, “even a grossly erroneous decision is binding ...” City of Everett v. Int. Brotherhood of Police Officers, Locals 633 & 634, 44 Mass.App.Ct. 671, 676 (1998). An arbitrator cannot, however, render an award that would require a person to engage in conduct that is prohibited by state or federal law. See Bureau of Special Investigations v. Coalition of Public Safety, 430 Mass. 601, 601 (2000).
+
+A reviewing court may vacate an arbitrator’s award if it finds that the award does not draw its essence from the collective bargaining agreement or is “so implausible” or “irrational as to permit the Court’s intervention to vacate the award.” Chief Admin. Justice of the Trial Court v. Service Employees Int'l Union, Local 254, 383 Mass. 791, 794 (1981). Thus, an arbitration award must be within the scope of the reference submitted to the arbitrator for a decision. See School Committee of West Springfield v. Korbut, 373 Mass. 788, 792 (1980); Greene v. Mari & Sons Flooring Co., 362 Mass. 560, 562 (1972). As arbitration is “the product of an agreement, the arbitrator is without authority to decide matters outside the scope of what the parities have agreed shall be arbitrated.” Boston Police Patrolmen’s Association v. City of Boston, 60 Mass.App.Ct. 672, 675 (2004). The Court may inquire into an arbitration award, however, “to determine if the arbitrator has exceeded the scope of his authority or decided the matter based on fraud, arbitrary conduct or procedural irregularity in the hearing.” Bureau of Special Investigations, 430 Mass. at 603 (internal quotations omitted).
+
+The arbitrator’s decision was based on two grounds: (1) there had been no unilateral change in Supervisors’ workload, and (2) the general subject of workload was covered by the CBA, which did not restrict or define Supervisors’ workload. The Union argues, in its memorandum, that the Arbitrator’s decision exceeded the scope of authority and was otherwise implausible. The Union also contends that the arbitrator’s award is against Massachusetts law because it requires the violation of a law.
+
+In considering whether there was a unilateral change to the Supervisors’ workload, the arbitrator carefully decided the merits of the grievance on the basis of the evidence presented to him. As highlighted above, this court is “strictly bound by the arbitrator’s factual findings and conclusions of law, even if they are in error.” Sch. Committee of Pittsfield v. United Educators of Pittsfield, 438 Mass. 753, 758 (2003). The arbitrator outlined his reasoning for finding that there was no unilateral change in “workload.” For example, the arbitrator noted that Supervisors had never been assigned a specific number of schools for which they had responsibility, their duties required work outside of regular school hours regardless the number of schools assigned to them, the reduction in staff resulted in no additional volume of work which had to be completed in a particular time frame, and the School Committee imposed no requirements for the completion of additional work or sanctions for failure to complete the work. The arbitrator clearly did not exceed his authority or make an otherwise impermissible finding.
+
+*16Notwithstanding the Union’s argument to the contrary, the arbitrator properly considered whether workload was already bargained for by the parties. An arbitration award must be within the scope of the reference submitted to the arbitrator for a decision. See School Committee of West Springfield, 373 Mass. at 792. The arbitrator properly interpreted the meaning of Article 1 (E). The arbitrator accurately noted that the parties had bargained for “workload” restrictions with respect to several other job positions with the Union. It was therefore reasonable for the arbitrator to conclude that the parties comprehensively addressed workload restrictions in the CBA. The arbitrator explicitly narrowed his finding to the issue of Supervisor workload. Indeed, the arbitrator stated that he was not holding that “if the contract contains any mention of a subject matter, then that entire area is beyond the protection of Section E.”10 The arbitrator did not “transcend! 1 the limits of the contract of which the agreement to arbitrate is just a part.” Plymouth-Carver School District v. J. Farmer & Corp., Inc., 407 Mass. 1006, 1007 (1990). There is no evidence that the arbitrator unilaterally added a provision creating a limitless workload provision for Supervisors.
+
+Additionally, there is no merit to the Union’s argument that the arbitrator’s decision requires the violation of the school attendance law. The arbitrator discussed alternative ways for Supervisors to handle their work. The arbitrator never suggested that the Supervisors should ignore or fail to perform their job duties. Simply stated, there is nothing in the arbitration award that would require Supervisors to engage in conduct that is prohibited by Massachusetts law. See Bureau of Special Investigations, 430 Mass. at 601.
+
+ORDER
+
+For the foregoing reasons, the Union’s Motion for Summary Judgment is DENIED. The City of Boston School Committee, Thomas W. Payzant, and Boston Public Schools’ Motion for Judgment on the Pleadings is ALLOWED and the arbitration award is AFFIRMED.
+
+1
+In his capacity as Superintendent of Schools.
+
+2
+As agreed to by the parties, the Union’s Motion for Summary Judgment and the School Committee’s Motion for Judgment on the Pleadings will be treated as Cross Motions for Judgment on the Pleadings.
+
+3
+The CBA was in effect at all times relevant to this dispute.
+
+4
+Supervisors were formerly identified as “truancy officers.”
+
+5
+In addition to outlining the requirements of mandatory school attendance, the Massachusetts legislature has also outlined the powers and duties of Supervisors. See G.L.c. 76, §20 (“Supervisors of attendance shall inquire into all cases . .
+
+6
+initially, during the 2002-2003 school year, there were eight school-based supervisors. A later retirement reduced this number to seven.
+
+7
+This additional work included reviewing more attendance cards, attending additional meetings, and having to bring work home.
+
+8
+The arbitrator highlighted that “[t]he contract contains a number of such provisions establishing limits or guidelines on class size and case load for classroom teachers; Speech and Language Pathologists; School Nurse; Occupational Therapist; Physical Therapist; Guidance Counselor, Evaluation Team Facilitator; Psychologist; and others.” Id. at 23-24.
+
+9
+The arbitrator limited this finding by stating that “I do not hold that, if the contract contains any mention of a subject matter, then that entire area is beyond the protection of Section E.” Id. at. 24.
+
+10
+To the extent the Union raises a “zipper clause” argument in its memorandum, the arbitrator’s statement seems to refute any argument that the arbitration converted Section E into a “zipper clause.”
