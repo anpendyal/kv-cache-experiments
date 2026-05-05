@@ -1,0 +1,127 @@
+[
+  {
+    "case_id": "davis-l-ct-cas_1_html_0060-01",
+    "questions": [
+      {
+        "question": "What three methods did the petitioner claim a right of way over the respondent's land?",
+        "ground_truth": "The petitioner claimed a right of way by grant, prescription, and necessity."
+      },
+      {
+        "question": "Why was the petitioner's claim to a right of way by grant rejected?",
+        "ground_truth": "The easement assigned to the widow in her set-off of dower ceased with her dower estate, citing Hoffman v. Savage, 15 Mass. 130."
+      },
+      {
+        "question": "Why could no right of way be acquired by prescription?",
+        "ground_truth": "Because the use began in grant and was mainly continued under a leasehold right until within the statutory period."
+      },
+      {
+        "question": "At what point in time did the court determine a way by necessity arose, and why?",
+        "ground_truth": "The way by necessity arose at the time of the administrator's sale for the payment of debts. The court reasoned that the set-off in dower was not a true separation of the land or the fee, but merely of the use of the land for a limited period, so the real separation of the estates occurred at the administrator's sale."
+      },
+      {
+        "question": "What was the final decree of the court?",
+        "ground_truth": "The court issued a decree for the petitioner of a right of way by necessity."
+      }
+    ]
+  },
+  {
+    "case_id": "mass-app-ct_75_html_0080-01",
+    "questions": [
+      {
+        "question": "Why was Don's 2003 bankruptcy petition dismissed?",
+        "ground_truth": "By 2003, Don was employed as a secretary earning approximately $30,000 annually, a significant increase from her prior earnings of $8,000. The bankruptcy trustee concluded she could afford to pay her debts and moved for dismissal, which the United States Bankruptcy Court for the District of Massachusetts granted."
+      },
+      {
+        "question": "What was the total jury verdict in favor of Don, and how was it broken down across the claims?",
+        "ground_truth": "The total jury verdict was $16,913, broken down as $11,413 on the negligence claim, $1,000 on the breach of contract claim, and $4,500 on the breach of the implied covenant of good faith and fair dealing claim."
+      },
+      {
+        "question": "What was Soo Hoo's argument for why Don suffered no damages, and how did the court respond?",
+        "ground_truth": "Soo Hoo argued that Don suffered no damages because she never paid the debts and that they were barred by the statute of limitations by the time of trial. The court rejected this, finding that the jury had sufficient evidence — including a stream of demand letters from creditors — to conclude that creditors retained enough enthusiasm to pursue Don, and that Soo Hoo failed to introduce the statute of limitations into evidence, so it could not be used as a postverdict argument."
+      },
+      {
+        "question": "Why did the court rule that Don was entitled to recover the $1,000 fee she paid Soo Hoo?",
+        "ground_truth": "The court ruled that Soo Hoo's failure to file the bankruptcy petition within a reasonable time was a clear breach of contract. One measure of damages for that breach is the amount paid for services that were not performed. Soo Hoo never argued that Don could recover either the fee or the benefit of the bargain but not both, so any claim of double recovery was waived."
+      },
+      {
+        "question": "What did the concurring judge suggest could have avoided all the litigation in this case?",
+        "ground_truth": "Judge Brown noted in his concurrence that Soo Hoo knew he had made a serious mistake, and that if he had simply paid Don the money she requested directly, all parties could have avoided the litigation entirely. He emphasized that litigation should be a last resort and that rational counseling was available at far less expense and professional embarrassment."
+      }
+    ]
+  },
+  {
+    "case_id": "mass-l-rptr_23_html_0013-01",
+    "questions": [
+      {
+        "question": "What four elements did the arbitrator require the Union to prove in order to prevail on its grievance?",
+        "ground_truth": "The arbitrator required the Union to show that: (1) the employer acted unilaterally; (2) the change increased the workload of the Supervisors; (3) workload is a mandatory subject of bargaining; and (4) the matter was not covered by the contract in effect at the time."
+      },
+      {
+        "question": "Why did the arbitrator conclude that the School Committee had not unilaterally increased the Supervisors' workload?",
+        "ground_truth": "The arbitrator found that Supervisors were never assigned a specific number of schools, were never ordered to work longer hours, were never disciplined for not completing a certain amount of work, and had discretion to handle cases more quickly by spending less time per case. The arbitrator concluded that more schools and referrals did not necessarily equate to more work, and that some employees simply chose to take more work home on their own."
+      },
+      {
+        "question": "What was the arbitrator's second basis for ruling against the Union, related to the CBA itself?",
+        "ground_truth": "The arbitrator found that the general subject of workload was already covered by the CBA, because the parties had bargained over workload and caseload restrictions for several other job positions such as teachers, nurses, guidance counselors, and speech therapists. This pattern suggested the CBA represented a complete agreement on workload, meaning there was no obligation to bargain mid-term over Supervisor workload under Article 1(E)."
+      },
+      {
+        "question": "What is the standard for judicial review of an arbitrator's award under Massachusetts law, and under what limited circumstances can a court vacate it?",
+        "ground_truth": "Judicial review of an arbitrator's award is narrow. A court may vacate an award only if the arbitrator exceeded their powers, or if the award does not draw its essence from the collective bargaining agreement, or is so implausible or irrational as to warrant intervention. Errors of fact or law alone are not grounds for vacating an award, and even a grossly erroneous decision is binding."
+      },
+      {
+        "question": "What was the court's final ruling on the Union's Motion for Summary Judgment and the School Committee's Motion for Judgment on the Pleadings?",
+        "ground_truth": "The court denied the Union's Motion for Summary Judgment, allowed the School Committee's Motion for Judgment on the Pleadings, and affirmed the arbitration award."
+      }
+    ]
+  },
+  {
+    "case_id": "rep-cont-el_1_html_0359-01",
+    "questions": [
+      {
+        "question": "What were the two grounds the petitioners alleged to vacate Burpee's seat in the house?",
+        "ground_truth": "The petitioners alleged that Burpee had removed from the commonwealth of Massachusetts to the state of Vermont with the intention of becoming a citizen of Vermont, and that he was not possessed of sufficient estate to qualify him for a seat in the house."
+      },
+      {
+        "question": "What evidence did the petitioners present to show that Burpee had permanently relocated to Vermont?",
+        "ground_truth": "Witnesses testified to Burpee's repeated declarations that he had removed to Ludlow, Vermont and would not return to Massachusetts with any intention of residing there. They also testified that he had sold all his property in Massachusetts except a small piece of land, transported his goods and chattels to Ludlow, had his house occupied by another family, removed his own family to Vermont, and had his name stricken from the list of voters by the selectmen of Sterling."
+      },
+      {
+        "question": "What did Burpee tell the member of the committee on leave of absence before departing?",
+        "ground_truth": "Burpee told the committee member that he would not return, that he would remove his family from Massachusetts, and that he had informed the electors of Sterling before the choice of representatives that he could not serve them as representative for longer than six weeks."
+      },
+      {
+        "question": "What was Burpee's defense against the evidence presented, and how did the committee respond to it?",
+        "ground_truth": "Burpee offered no counter evidence beyond his own declaration that he believed the witnesses had misunderstood and were mistaken. The committee found this unpersuasive, as each witness, many of whom were known to be of high standing and character, persisted in the truth and correctness of their testimony under cross-examination."
+      },
+      {
+        "question": "What was the committee's final recommendation, and what did the house decide regarding a new election for Sterling?",
+        "ground_truth": "The committee unanimously recommended that Burpee's seat be declared vacant. As for the petitioners' request for a writ for a new election, the committee declined, stating this was one of the cases in which it had been repeatedly decided that the town was not entitled to a precept for a new election. The house agreed to the report and allowed Burpee pay up to the time of its acceptance."
+      }
+    ]
+  },
+  {
+    "case_id": "super-ct-jud_1_html_0258-01",
+    "questions": [
+      {
+        "question": "What did the Chief Justice identify as the governing principle of law under the current charter, and how did he contrast it with the principle used under the old charter?",
+        "ground_truth": "The Chief Justice stated that the governing principle under the current charter is to punish crimes only as they affect society. He contrasted this with the old charter, under which colonists adopted the Judicial Laws of Moses and punished crimes based on the real guilt of the criminal, leading to punishments like death for adultery, blasphemy, and incorrigible disobedience by children."
+      },
+      {
+        "question": "How did the Chief Justice define a libel, and did he agree that a specific person's name must appear in a publication for it to constitute a libel?",
+        "ground_truth": "The Chief Justice defined a libel as a publication in which the person libelled is sufficiently marked out and plainly pointed out to a common understanding, even without naming them. He explicitly rejected the notion that a name or initial letters were required, citing Lord Talbot's rule that if the person is easily known to every reader from the whole of the writing taken together, that is sufficient to constitute a libel. He also noted that a libel need not reference any particular person at all, as in cases involving libels against the government or religion."
+      },
+      {
+        "question": "What was the Chief Justice's response to the argument that the liberty of the press would be endangered by prosecuting libels?",
+        "ground_truth": "The Chief Justice argued that true liberty of the press meant freedom from prior licensing or restraint, not freedom from punishment after publication. He stated that every man who prints does so at his peril, just as every man who speaks does so at his peril. He argued that restraining the press through punishment of libels was actually necessary to preserve liberty, and that tolerating licentious abuse of government was the most likely way to destroy freedom."
+      },
+      {
+        "question": "What was the outcome after the Chief Justice charged the Grand Jury to present the alleged libel published in the Boston Gazette?",
+        "ground_truth": "The Grand Jury found no bill for libelling, meaning they declined to indict anyone for the alleged libel despite the Chief Justice's strong charge urging them to do so. The Chief Justice later gave a gentle rebuke to this Grand Jury in his charge to the next Grand Jury at Charlestown."
+      },
+      {
+        "question": "What was the response of the Massachusetts House of Representatives to Governor Bernard's message asking them to take action against the Boston Gazette publication?",
+        "ground_truth": "The House of Representatives declined to take action, stating that no particular person was named in the publication and that they could not see reason to conclude it affected the majesty of the King, the dignity of government, or the honor of the General Court. They affirmed that the liberty of the press was a great bulwark of the liberty of the people and that existing law already provided sufficient means for punishing offenders without the interposition of the General Assembly."
+      }
+    ]
+  }
+]
