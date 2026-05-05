@@ -1,0 +1,19 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:55<00:55, 55.05s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:17<00:00, 35.65s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:17<00:00, 38.56s/it]
+Traceback (most recent call last):
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache.py", line 387, in <module>
+    build_kv_from_dataset(
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache.py", line 310, in build_kv_from_dataset
+    kv_bytes, n_tokens, text_bytes, pt_size = _save_dc_cache(
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache.py", line 184, in _save_dc_cache
+    result, n_tokens, text_bytes = _make_dc_cache(backend, text, max_tokens, **model_options)
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache.py", line 129, in _make_dc_cache
+    out = backend._model.model(
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/utils/generic.py", line 943, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/models/granitemoehybrid/modeling_granitemoehybrid.py", line 1378, in forward
+    if past_key_values and not past_key_values.has_previous_state:
+AttributeError: 'DynamicCache' object has no attribute 'has_previous_state'

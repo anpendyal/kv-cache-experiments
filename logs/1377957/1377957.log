@@ -1,0 +1,2 @@
+2026-04-29 16:55:54 | INFO | mode=benchmark | max_tokens=17000 | reporters=['davis-l-ct-cas', 'mass', 'mass-app-ct', 'mass-app-dec', 'mass-app-div', 'mass-app-div-annual', 'mass-l-rptr', 'mass-supp', 'rec-co-ct', 'rep-cont-el', 'rep-cont-elect-case', 'super-ct-jud']
+2026-04-29 16:57:17 | INFO | model=ibm-granite/granite-4.0-micro | arch=['GraniteMoeHybridForCausalLM']
