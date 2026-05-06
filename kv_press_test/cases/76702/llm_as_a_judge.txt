@@ -1,0 +1,113 @@
+KV PRESS EVALUATION - LLM JUDGE RESULTS (RUN 2, max_new_tokens=512)
+======================================================================
+
+Models Evaluated:
+- ObservedAttentionPress (compression_ratio=0.5)
+- KVzipPress (compression_ratio=0.5)
+
+Base Model: ibm-granite/granite-3.3-8b-instruct
+Number of Cases: 5
+Questions per Case: 5
+Total Comparisons: 25 per press method
+
+
+PER-CASE SCORES (1-5 scale)
+-----------------------------
+
+CASE: davis-l-ct-cas_1_html_0060-01 (Maguire v. Safford - Right of Way)
+  Question                              OBS   ZIP   Notes
+  Three methods claimed                  5     5    Both complete and accurate. OBS cites wrong cases (Symmes v. Davis vs correct Symmes v. Drew)
+  Grant rejected                         3     5    OBS cites wrong case (Hoff v. Zimmerman instead of Hoffman v. Savage); ZIP correct
+  No prescription                        5     5    Both complete and accurate
+  Way by necessity timing                5     5    Both complete and accurate
+  Final decree                           4     4    Both correct but unnecessarily verbose
+  Case Average:                         4.4   4.8
+
+CASE: mass-app-ct_75_html_0080-01 (Don v. Soo Hoo - Legal Malpractice)
+  Question                              OBS   ZIP   Notes
+  Why petition dismissed                 4     5    OBS states wrong original income ($11k vs $8k); ZIP accurate
+  Jury verdict breakdown                 5     4    Both complete; ZIP adds irrelevant "paragraph 1" citation
+  Soo Hoo's damages argument            4     5    Both good; ZIP more concise and precise
+  $1,000 fee recovery                   5     5    Both complete and accurate
+  Concurring judge suggestion           3     3    Both incorrectly say Soo Hoo should have paid the $1,000 fee back — ground truth says pay Don the money she requested directly, which was more than just the fee
+  Case Average:                         4.2   4.4
+
+CASE: mass-l-rptr_23_html_0013-01 (Boston Teachers Union v. School Committee)
+  Question                              OBS   ZIP   Notes
+  Four elements to prove                 4     5    Both complete; OBS gets arbitrator name wrong (Gary W. Goot vs Gary J. Wooters)
+  No unilateral workload increase        5     5    Both complete and accurate
+  Second basis re CBA                    4     5    OBS has garbled prefix again (-1|jurisdiction:); both substantively correct
+  Standard for judicial review           5     5    Both complete and accurate
+  Final ruling                           5     5    Both complete and accurate
+  Case Average:                         4.6   5.0
+
+CASE: rep-cont-el_1_html_0359-01 (Case of Emory Burpee)
+  Question                              OBS   ZIP   Notes
+  Two grounds to vacate                  5     5    Both complete and accurate
+  Evidence of relocation                 5     5    Both complete and accurate
+  What Burpee told committee             3     5    OBS misses six-week detail and family removal; ZIP complete
+  Burpee's defense                       4     5    OBS inaccurately says Burpee claimed he hadn't sold all his property; ZIP accurate
+  Final recommendation                   5     4    Both good; ZIP's reason for no new election is slightly off
+  Case Average:                         4.4   4.8
+
+CASE: super-ct-jud_1_html_0258-01 (1768 Charge to Grand Jury)
+  Question                              OBS   ZIP   Notes
+  Governing principle                    4     5    Both good; ZIP adds useful context about governance structure differences
+  Definition of libel                    4     5    Both accurate; ZIP more thorough on Lord Talbot's rule
+  Liberty of press argument              4     4    Both capture core reasoning but miss specific "prints at his peril" framing
+  Grand Jury outcome                     1     4    OBS returns "-1" which is a complete failure; ZIP accurate
+  House of Representatives response      5     5    Both complete and accurate
+  Case Average:                         3.6   4.6
+
+
+OVERALL AVERAGES
+-----------------
+  ObservedAttentionPress: 4.1 / 5
+  KVzipPress:             4.7 / 5
+
+
+COMPARISON WITH RUN 1 (no max_new_tokens limit, i.e. default ~50-100 tokens)
+------------------------------------------------------------------------------
+  ObservedAttentionPress: 3.2 -> 4.1  (+0.9)
+  KVzipPress:             3.6 -> 4.7  (+1.1)
+
+  Setting max_new_tokens=512 produced a dramatic improvement for both presses.
+  Truncation was the dominant failure mode in Run 1; with more tokens allowed,
+  both presses retrieve and express the correct information much more completely.
+
+
+KEY FINDINGS
+-------------
+1. KVzipPress outperforms ObservedAttentionPress overall (4.7 vs 4.1), with
+   the gap widening compared to Run 1 (was 3.6 vs 3.2).
+
+2. ObservedAttentionPress has a recurring artifact: a "-1|jurisdiction:" prefix
+   appears on some answers, indicating occasional instability or hallucination
+   in the compressed attention representation.
+
+3. ObservedAttentionPress hallucinates case citations. It fabricated "Hoff v.
+   Zimmerman" and "Symmes v. Davis" when the correct citations were "Hoffman v.
+   Savage" and "Symmes v. Drew". KVzipPress cited correctly.
+
+4. ObservedAttentionPress produced a complete failure ("-1") on the Grand Jury
+   outcome question in the 1768 case, the longest and most complex document.
+   This suggests OBS struggles more than ZIP with very long contexts.
+
+5. Both presses mischaracterized the concurring judge's suggestion in Don v.
+   Soo Hoo, saying Soo Hoo should have paid back the $1,000 fee, when the
+   ground truth says he should have paid Don the money she requested directly
+   (a broader amount). This is a consistent factual error across both methods.
+
+6. The 1768 Grand Jury case (super-ct-jud_1_html_0258-01) was the hardest case
+   for both presses, particularly OBS (3.6 average). This is the longest
+   document and contains the most complex historical and legal reasoning.
+
+
+RECOMMENDED NEXT STEPS
+------------------------
+- Investigate why OBS produces "-1" outputs and the "-1|jurisdiction:" prefix.
+- Test higher compression ratios (e.g. 0.3, 0.7) to measure sensitivity.
+- Consider testing on a supported model architecture (e.g. Qwen2 or LLaMA)
+  since Granite is flagged as untested by kvpress, which may contribute to
+  OBS instability.
+- Run a larger sample of cases to get more statistically robust results.

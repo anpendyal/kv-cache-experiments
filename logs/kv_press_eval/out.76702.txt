@@ -1,0 +1,55 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@cccxc598>
+Subject: Job 76702: <kvpress_eval> in cluster <CCCFP15Cluster> Done
+
+Job <kvpress_eval> was submitted from host <ccc-login5> by user <apendyal> in cluster <CCCFP15Cluster> at Wed May  6 16:31:55 2026
+Job was executed on host(s) <cccxc598>, in queue <normal>, as user <apendyal> in cluster <CCCFP15Cluster> at Wed May  6 16:31:30 2026
+</u/apendyal> was used as the home directory.
+</dccstor/nathan-ckpts/anooshka> was used as the working directory.
+Started at Wed May  6 16:31:30 2026
+Terminated at Wed May  6 16:50:40 2026
+Results reported at Wed May  6 16:50:40 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash     
+#BSUB -J kvpress_eval
+#BSUB -gpu "num=1:gmem=40G"                                                                                                                                   
+#BSUB -M 65536
+#BSUB -hl                                                                                                                                                     
+#BSUB -W 4:00   
+#BSUB -cwd /dccstor/nathan-ckpts/anooshka
+#BSUB -o /dccstor/nathan-ckpts/anooshka/logs/kv_press_eval/out.%J.txt                                                                                                       
+#BSUB -e /dccstor/nathan-ckpts/anooshka/logs/kv_press_eval/err.%J.txt
+                                                                                                                                                              
+export PATH="$HOME/.local/bin:$PATH"
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+micromamba run -p /u/apendyal/mamba_envs/mellea_py310 python -u /dccstor/nathan-ckpts/anooshka/kv_press_eval.py 
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1637.51 sec.
+    Max Memory :                                 2 GB
+    Average Memory :                             1.57 GB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                393
+    Run time :                                   1150 sec.
+    Turnaround time :                            1125 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file </dccstor/nathan-ckpts/anooshka/logs/kv_press_eval/err.76702.txt> for stderr output of this job.
+
