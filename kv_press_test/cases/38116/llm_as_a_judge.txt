@@ -1,0 +1,88 @@
+KV PRESS EVALUATION SUMMARY
+============================
+
+Models Evaluated:
+- ObservedAttentionPress (compression_ratio=0.5)
+- KVzipPress (compression_ratio=0.5)
+
+Base Model: ibm-granite/granite-3.3-8b-instruct
+Number of Cases: 4
+Questions per Case: 5
+Total Comparisons: 20 per press method
+
+
+PER-CASE SCORES (1-5 scale)
+-----------------------------
+
+CASE: davis-l-ct-cas_1_html_0060-01 (Maguire v. Safford - Right of Way)
+  Question                              OBS   ZIP
+  Three methods claimed                  3     3
+  Grant rejected                         4     4
+  No prescription                        4     5
+  Way by necessity timing                4     4
+  Final decree                           4     4
+  Case Average:                         3.8   4.0
+
+CASE: mass-app-ct_75_html_0080-01 (Don v. Soo Hoo - Legal Malpractice)
+  Question                              OBS   ZIP
+  Why petition dismissed                 2     2
+  Jury verdict breakdown                 3     3
+  Soo Hoo's damages argument            3     3
+  $1,000 fee recovery                   3     3
+  Concurring judge suggestion           2     2
+  Case Average:                         2.6   2.6
+
+CASE: mass-l-rptr_23_html_0013-01 (Boston Teachers Union v. School Committee)
+  Question                              OBS   ZIP
+  Four elements to prove                 3     3
+  No unilateral workload increase        4     4
+  Second basis re CBA                    2     4
+  Standard for judicial review           4     4
+  Final ruling                           5     5
+  Case Average:                         3.6   4.0
+
+CASE: rep-cont-el_1_html_0359-01 (Case of Emory Burpee)
+  Question                              OBS   ZIP
+  Two grounds to vacate                  3     3
+  Evidence of relocation                 4     4
+  What Burpee told committee             3     5
+  Burpee's defense                       3     4
+  Final recommendation                   3     4
+  Case Average:                         3.2   4.0
+
+
+OVERALL AVERAGES
+-----------------
+  ObservedAttentionPress: 3.2 / 5
+  KVzipPress:             3.6 / 5
+
+
+KEY FINDINGS
+-------------
+1. Truncation is the dominant failure mode. Both presses frequently cut off
+   mid-sentence, suggesting max_new_tokens is set too low. This is a generation
+   parameter issue, not a compression issue.
+
+2. Factual accuracy is generally preserved. When answers are not truncated,
+   both presses tend to retrieve the correct information from the compressed
+   context. Errors are more often due to incompleteness than hallucination.
+
+3. KVzipPress outperforms ObservedAttentionPress overall (3.6 vs 3.2),
+   particularly on completeness. The gap is most visible in the Burpee and
+   Teachers Union cases.
+
+4. ObservedAttentionPress produced a garbled output on one question in the
+   Teachers Union case ("-1|jurisdiction:" prefix), suggesting occasional
+   instability with this press method.
+
+5. The legal malpractice case (Don v. Soo Hoo) was the hardest for both
+   presses, with both averaging 2.6. This case may require more nuanced
+   reasoning across multiple parts of the document.
+
+
+RECOMMENDED NEXT STEPS
+------------------------
+- Increase max_new_tokens to reduce truncation and re-evaluate.
+- Test additional compression ratios (e.g. 0.3, 0.7) to measure sensitivity.
+- Run the fifth case (super-ct-jud_1_html_0258-01) and include in final results.
+- Consider using an automated LLM-as-judge scoring pipeline for scalability.

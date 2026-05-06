@@ -1,0 +1,59 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@cccxc582>
+Subject: Job 37919: <kvpress_eval> in cluster <CCCFP15Cluster> Exited
+
+Job <kvpress_eval> was submitted from host <ccc-login5> by user <apendyal> in cluster <CCCFP15Cluster> at Wed May  6 03:47:28 2026
+Job was executed on host(s) <cccxc582>, in queue <normal>, as user <apendyal> in cluster <CCCFP15Cluster> at Wed May  6 03:47:03 2026
+</u/apendyal> was used as the home directory.
+</dccstor/nathan-ckpts/anooshka> was used as the working directory.
+Started at Wed May  6 03:47:03 2026
+Terminated at Wed May  6 03:47:17 2026
+Results reported at Wed May  6 03:47:17 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+  #!/bin/bash                                                                                                                                                   
+  #BSUB -J kvpress_eval
+  #BSUB -gpu "num=1:gmem=40G"
+  #BSUB -M 65536                                                                                                                                                
+  #BSUB -hl                                                                                                                                                     
+  #BSUB -W 4:00                                                                                                                                                 
+  #BSUB -cwd /dccstor/nathan-ckpts/anooshka                                                                                                                     
+  #BSUB -o /dccstor/nathan-ckpts/anooshka/logs/out.%J.txt                                                                                                       
+  #BSUB -e /dccstor/nathan-ckpts/anooshka/logs/err.%J.txt
+                                                                                                                                                                
+  export PATH="$HOME/.local/bin:$PATH"
+  mkdir -p /dccstor/nathan-ckpts/anooshka/kv_press_test                                                                                                         
+  micromamba run -p /u/apendyal/mamba_envs/mellea_py310 \                                                                                                       
+    bash -c '                                                                                                                                                   
+      pip install -e /dccstor/nathan-ckpts/anooshka/kvpress --quiet &&                                                                                          
+      python -u /dccstor/nathan-ckpts/anooshka/kv_press_eval.py                                                                                             
+    '    
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   11.53 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                7
+    Run time :                                   14 sec.
+    Turnaround time :                            0 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file </dccstor/nathan-ckpts/anooshka/logs/err.37919.txt> for stderr output of this job.
+
