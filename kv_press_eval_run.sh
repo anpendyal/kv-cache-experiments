@@ -9,4 +9,5 @@
 #BSUB -e /dccstor/nathan-ckpts/anooshka/logs/err.%J.txt
                                                                                                                                                               
 export PATH="$HOME/.local/bin:$PATH"
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 micromamba run -p /u/apendyal/mamba_envs/mellea_py310 python -u /dccstor/nathan-ckpts/anooshka/kv_press_eval.py 
