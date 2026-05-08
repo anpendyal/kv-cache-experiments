@@ -146,22 +146,13 @@ def tensor_bytes(x):
     return x.numel() * x.element_size()
 
 
-def cache_bytes(legacy):
-    # legacy cache is a tuple of per-layer entries; each entry can be a
-    # (key, value) tuple, a dict, or occasionally a bare tensor depending
-    # on the model and transformers version
+def cache_bytes(cache):
     total = 0
-    for layer in legacy:
-        if isinstance(layer, (tuple, list)):
-            for t in layer:
-                if torch.is_tensor(t):
-                    total += tensor_bytes(t)
-        elif isinstance(layer, dict):
-            for t in layer.values():
-                if torch.is_tensor(t):
-                    total += tensor_bytes(t)
-        elif torch.is_tensor(layer):
-            total += tensor_bytes(layer)
+    for layer in cache.layers:
+        if torch.is_tensor(layer.keys):
+            total += tensor_bytes(layer.keys)
+        if torch.is_tensor(layer.values):
+            total += tensor_bytes(layer.values)
     return total
 
 
@@ -183,20 +174,21 @@ def _save_dc_cache(
 ):
     result, n_tokens, text_bytes = _make_dc_cache(backend, text, max_tokens, **model_options)
 
-    # Move KV tensors to CPU before legacy conversion so GPU memory is freed
-    # before serialization (torch.save on GPU tensors pins extra CPU staging buffers).
-    # This fixed the OOM
-    result.key_cache = [k.cpu() for k in result.key_cache]
-    result.value_cache = [v.cpu() for v in result.value_cache]
+    # Move KV tensors to CPU before serialization so GPU memory is freed
+    # before torch.save (saving GPU tensors pins extra CPU staging buffers).
+    for layer in result.layers:
+        if torch.is_tensor(layer.keys):
+            layer.keys = layer.keys.cpu()
+        if torch.is_tensor(layer.values):
+            layer.values = layer.values.cpu()
     torch.cuda.empty_cache()
 
-    legacy = result.to_legacy_cache()
-    kv_bytes = cache_bytes(legacy)
+    kv_bytes = cache_bytes(result)
 
     if benchmark:
         # Serialize to an in-memory buffer to measure .pt size without touching disk
         buf = io.BytesIO()
-        torch.save(legacy, buf)
+        torch.save(result, buf)
         pt_size = buf.tell()
         del buf
     else:
@@ -207,13 +199,9 @@ def _save_dc_cache(
         if out_dir:
             os.makedirs(out_dir, exist_ok=True)
         with open(out_path, "wb") as ofh:
-            torch.save(legacy, ofh)
+            torch.save(result, ofh)
         pt_size = safe_getsize(out_path)
 
-    # Explicitly clear DynamicCache internals to release CPU memory
-    del legacy
-    result.key_cache.clear()
-    result.value_cache.clear()
     del result
     torch.cuda.empty_cache()
 
