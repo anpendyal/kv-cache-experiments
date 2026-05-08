@@ -42,7 +42,7 @@ for case in data:
     log.info(f"ObservedAttentionPress | Case: {case_id}")
     obs_answers[case_id] = {}
     for q in case["questions"]:
-        obs_answers[case_id][q["question"]] = obs_pipe(context, question=q["question"], press=obs_press)["answer"]
+        obs_answers[case_id][q["question"]] = obs_pipe(context, question=q["question"], press=obs_press, max_new_tokens=512)["answer"]
 
 del obs_pipe
 torch.cuda.empty_cache()
@@ -65,7 +65,7 @@ for case in data:
         question = q["question"]
         ground_truth = q["ground_truth"]
         obs_answer = obs_answers[case_id][question]
-        zip_answer = zip_pipe(context, question=question, press=zip_press)["answer"]
+        zip_answer = zip_pipe(context, question=question, press=zip_press, max_new_tokens=512)["answer"]
 
         log.info(f"Question: {question}")
         log.info(f"Ground truth: {ground_truth}")
