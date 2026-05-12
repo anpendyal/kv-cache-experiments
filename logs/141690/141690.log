@@ -5782,4 +5782,3 @@
 2026-05-08 10:34:32 | INFO | case=5668 | id=mass_86/html/0116-01.html | n_tokens=1016 | text=4.73KB | kv_est=79.38MB | pt=79.40MB | kv_time=0.158s | gpu_alloc=6.35GB gpu_reserved=6.35GB
 2026-05-08 10:34:32 | INFO | case=5669 | id=mass_86/html/0118-01.html | n_tokens=702 | text=3.22KB | kv_est=54.84MB | pt=54.87MB | kv_time=0.109s | gpu_alloc=6.35GB gpu_reserved=6.35GB
 2026-05-08 10:34:32 | INFO | case=5670 | id=mass_86/html/0120-01.html | n_tokens=1132 | text=5.11KB | kv_est=88.44MB | pt=88.46MB | kv_time=0.171s | gpu_alloc=6.35GB gpu_reserved=6.35GB
-2026-05-08 10:34:32 | INFO | case=5671 | id=mass_86/html/0122-01.html | n_tokens=1168 | text=5.35KB | kv_est=91.25MB | pt=91.27MB | kv_time=0.171s | gpu_alloc=6.35GB gpu_reserved=6.35GB

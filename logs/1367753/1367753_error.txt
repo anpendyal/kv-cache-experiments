@@ -1,0 +1,11 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [01:23<01:23, 83.35s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:48<00:00, 49.26s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:48<00:00, 54.37s/it]
+Traceback (most recent call last):
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache.py", line 399, in <module>
+    build_kv_from_dataset(
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache.py", line 322, in build_kv_from_dataset
+    kv_bytes, n_tokens, text_bytes, pt_size = _save_dc_cache(
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache.py", line 214, in _save_dc_cache
+    _cache_to_cpu(result)
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache.py", line 183, in _cache_to_cpu
+    for attr, val in vars(cache).items():
+TypeError: vars() argument must have __dict__ attribute

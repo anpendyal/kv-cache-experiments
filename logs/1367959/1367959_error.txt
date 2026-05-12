@@ -1,0 +1,34 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:22<00:22, 22.94s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:29<00:00, 13.17s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:29<00:00, 14.63s/it]
+Traceback (most recent call last):
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache.py", line 430, in <module>
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache.py", line 353, in build_kv_from_dataset
+    logger.info(f"total_pt_size={fmt_bytes(total_pt_bytes)}")
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache.py", line 239, in _save_dc_cache
+    
+  File "/dccstor/nathan-ckpts/anooshka/kv_cache.py", line 128, in _make_dc_cache
+    with torch.no_grad():
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/utils/generic.py", line 943, in wrapper
+    output = func(self, *args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/models/granitemoehybrid/modeling_granitemoehybrid.py", line 1346, in forward
+    layer_outputs = decoder_layer(
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/modeling_layers.py", line 83, in __call__
+    return super().__call__(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/models/granitemoehybrid/modeling_granitemoehybrid.py", line 1112, in forward
+    hidden_states = self.mamba(
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/models/granitemoehybrid/modeling_granitemoehybrid.py", line 827, in forward
+    return self.torch_forward(hidden_states, cache_params, cache_position, attention_mask)
+  File "/u/apendyal/mamba_envs/mellea_py310/lib/python3.10/site-packages/transformers/models/granitemoehybrid/modeling_granitemoehybrid.py", line 748, in torch_forward
+    G_intermediate = C[:, :, :, None, :, :] * B[:, :, None, :, :, :]  # shape: (b, c, l, s, h, n)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 106.00 GiB. GPU 0 has a total capacity of 79.18 GiB of which 63.62 GiB is free. Including non-PyTorch memory, this process has 15.55 GiB memory in use. Of the allocated memory 14.85 GiB is allocated by PyTorch, and 38.00 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

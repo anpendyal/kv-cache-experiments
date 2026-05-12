@@ -1,0 +1,1 @@
+2026-04-28 16:55:38 | INFO | mode=benchmark | max_tokens=17000 | reporters=['davis-l-ct-cas', 'mass', 'mass-app-ct', 'mass-app-dec', 'mass-app-div', 'mass-app-div-annual', 'mass-l-rptr', 'mass-supp', 'rec-co-ct', 'rep-cont-el', 'rep-cont-elect-case', 'super-ct-jud']
