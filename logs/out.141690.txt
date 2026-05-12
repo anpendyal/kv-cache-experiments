@@ -1,0 +1,61 @@
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@cccxc593>
+Subject: Job 141690: <kvcache_mass_bench> in cluster <CCCFP15Cluster> Exited
+
+Job <kvcache_mass_bench> was submitted from host <ccc-login5> by user <apendyal> in cluster <CCCFP15Cluster> at Fri May  8 10:03:20 2026
+Job was executed on host(s) <cccxc593>, in queue <normal>, as user <apendyal> in cluster <CCCFP15Cluster> at Fri May  8 10:02:55 2026
+</u/apendyal> was used as the home directory.
+</dccstor/nathan-ckpts/anooshka> was used as the working directory.
+Started at Fri May  8 10:02:55 2026
+Terminated at Fri May  8 10:47:34 2026
+Results reported at Fri May  8 10:47:34 2026
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+#BSUB -J kvcache_mass_bench
+#BSUB -gpu "num=1:gmem=40G"
+#BSUB -W 48:00
+#BSUB -cwd /dccstor/nathan-ckpts/anooshka
+#BSUB -o /dccstor/nathan-ckpts/anooshka/logs/out.%J.txt
+#BSUB -e /dccstor/nathan-ckpts/anooshka/logs/err.%J.txt
+
+export PATH="$HOME/.local/bin:$PATH"
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+mkdir -p /dccstor/nathan-ckpts/anooshka/logs
+micromamba run -p /u/apendyal/mamba_envs/mellea_py310 \
+    python -u /dccstor/nathan-ckpts/anooshka/kv_cache.py \
+        --jurisdiction "Mass." \
+        --reporters_metadata /dccstor/nathan-ckpts/anooshka/ReportersMetadata.json \
+        --out_root /dccstor/nathan-ckpts/anooshka/caselaw_kv/massachusetts \
+        --logs_dir /dccstor/nathan-ckpts/anooshka/logs \
+        --max_tokens 17000 \
+        --benchmark
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   2675.00 sec.
+    Max Memory :                                 35 GB
+    Average Memory :                             23.85 GB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              38
+    Max Threads :                                591
+    Run time :                                   2679 sec.
+    Turnaround time :                            2654 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file </dccstor/nathan-ckpts/anooshka/logs/err.141690.txt> for stderr output of this job.
+
